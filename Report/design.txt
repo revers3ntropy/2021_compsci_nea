@@ -1,0 +1,89 @@
+ ================================================================================================
+  |                                       Joseph Coppin                                        |
+ ================================================================================================
+
+                                  Project Name : Computer Science GSCE NEA Coursework
+
+                                     File Name : design.txt
+
+                                       Created : July 2, 2020
+
+                                   Last Update : July 2, 2020
+
+ ------------------------------------------------------------------------------------------------
+
+    Information about the design of the program, and planning. Contains requirements for the 
+    program.
+	
+ ================================================================================================
+
+Problem:
+	
+	An airline company is not sure what the most cost-efficient way of running flights between 
+	the UK and overseas airports are. 
+
+List of requirements:
+
+	The program must...
+		read from the given csv file
+		record details of the journey from user input
+		calculate the most likely profit or loss, given the data inputed
+		have an menu system
+		be able to be quite from
+
+
+
+Hierachy chart and variable table can be found in planning/data_structure.txt
+
+MVP pseudocode (note that this is just an overveiw of what the code should roughly look like):
+
+	get Airports.txt as airport_data  # getting the airport data from the file
+	set airports to empty list        # empty list of all airport objects
+
+	set airplane_types_data to dict   # would put the aircraft types data in this dict
+
+	for line in aiport_data:          # is initialising the airports from the file
+		set current_airport_data to seperate(line)
+		add_to(airports) create_new 'Airport' object (current_airport_data)
+
+	until Stopped:                    # the main loop
+		input_data = input()  		  # gets the user input
+
+		if input_data = 'quit':       # end the program
+			Stopped()
+
+		else if input_data = 'enter airport':                  # menu option 'enter airport'
+			set airport_code to input()
+			if airport_code = LPL or airport_code = BOH:       # checks to see if it recognises the airport code
+				set overseas_airport_code to input()
+				if overseas_airport_code is in airports.code:  # checks to see if it recognises the airport code 
+																 (would probably loop through all airports here, so I
+																 have used i in the next line to show the index of the
+																 airport)
+					output(airports[i].name)
+				else:
+					output('error: airport not found')
+			else:
+				output('error: not known airport code')
+
+		else if input_data = 'enter flight details':  # menu option to look at a flight
+			set type_of_aircraft to input()
+			if type_of_aircraft not in aircraft_types:
+				output('error: not valid aircraft type')
+			else:
+				output(aircraft_types_data[type_of_aircraft])
+				first_class_seats = input()
+				if first_class_seats > aircraft_types_data[minimum_fiat_class_seats] or \
+					first_class_seats < aircraft_types_data[number_of_seats] / 2:
+					output('error: invalid number of seats')
+				output(calculate_standard_class_seats(first_class_seats))
+
+		else:
+			output(calculate_profit(input_data, aircraft_types_data))  # tells the user the cost of that flight
+
+
+
+Evaluation:
+
+
+

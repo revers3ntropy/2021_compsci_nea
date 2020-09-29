@@ -1,0 +1,51 @@
+ ================================================================================================
+  |                                       Joseph Coppin                                        |
+ ================================================================================================
+
+                                  Project Name : Computer Science GSCE NEA Coursework
+
+                                     File Name : time_management.txt
+
+                                       Created : July 2, 2020
+
+                                   Last Update : July 2, 2020
+
+ ------------------------------------------------------------------------------------------------
+
+         First step planning, what I should spend time on, and how I actually use the time.
+
+ ================================================================================================
+
+	             Planning:
+
+Estimated time:  2 hrs
+Time allowed:    4 hrs
+Used:            1 hrs 5 mins (~ 27%)
+
+
+	             Writing unit tests and other tests:
+
+Estimated time:  3 hrs
+Time allowed:    5 hrs
+Used:            0 hrs 0 mins (~ 0%)
+
+
+	             Coding:
+
+Estimated time:  5 hrs
+Time allowed:    7 hrs
+Used:            1 hrs 20 mins (~ 18%)
+
+
+	             Write-up:
+
+Estimated time:  2 hrs
+Time allowed:    3 hrs
+Used:            0 hrs 28 mins (~ 16%)
+
+
+	             bug fixes, testing, and other:
+
+Estimated time:  1 hrs
+Time allowed:    2 hrs
+Used:            0 hrs 0 mins (~ 0%)

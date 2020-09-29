@@ -1,0 +1,78 @@
+ ================================================================================================
+  |                                       Joseph Coppin                                        |
+ ================================================================================================
+
+                                  Project Name : Computer Science GSCE NEA Coursework
+
+                                     File Name : data_structures.txt
+
+                                       Created : July 2, 2020
+
+                                   Last Update : July 2, 2020
+
+ ---------------------------
+ ---------------------------------------------------------------------
+
+            All variables and constants in the project, with descriptions and types.
+
+ ================================================================================================
+
+program_listing - folder - contains all the code for the program
+	main      - .py file - contains the program to be run
+		uk_airport       - string - the airport from the UK, the start
+		other_airport.   - string - the target airport, the end
+		type_of_aircraft - string - which aircraft will be used
+		1st_class_seats  - int    - how many seats on the new aircraft are going to be 1st class
+		1st_class_price  - float  - how much a first class ticket costs
+		standard_price   - float  - how much a normal ticket costs
+
+	airplanes - .py file - contains the class Airplane
+		Airplane (None) - class - the class for airplanes
+			running_cost    - int    - how much the aircraft costs per 100km of travel
+			max_range       - int    - how far the airplane can travel in km before needing to refuel
+			first_class_min - int    - the minimum number of fist class seats the airplane can hold
+			type 		    - string - what type of airplane it is
+
+	airports - .py file - contains the class Airport
+		Airport (None) - class - the class for airports
+			code - string - three letter identification code for airport
+			name - string - the name of the airport
+			dist_LJL - int - the distance between this airport and LJL (Liverpool John Lennon)
+			dist_BI - int - the distance between this airport and BI (Bournemouth International)
+	
+	globals - .py file - contains all global variables and constants for the program
+		airplane_types_data - dict - all the data for the type fo airplane. I considered a normalised approach,
+		                                             where I would put the data in each instance of Airplane, but I realised
+													 that having the data for each type in a global location would solve the
+													 problem much better. This would contain the data in the following format:
+			key   - string - the name of the aircraft type
+			value - tuple - contains the data in the following format:
+					data - int / float - the value of one variable in an instance of Airplane
+		go            - bool - wether or not the graphics and program should run
+		SCREEN_SIZE_X - int - the width of the screen in pixels
+		SCREEN_SIZE_Y - int - the height of the screen in pixels
+		BACKGROUND_COLOUR - tuple - the colour the background should be in form RBG, using:
+			red    - int - the red aspect of the beckground colour
+			blue   - int - the red aspect of the beckground colour
+			greeen - int - the red aspect of the beckground colour
+		FPS              - int      - how fast the graphics should try to run, in ticks per second
+		list_of_airports - list     - a list of all airports as Airport objects
+		current_airplane - Airplane - the current Airplane object which is being tested
+		current_airport  - Airport  - the Airport object current_airplane is coming from
+		target_airport   - Airport  - the Airport object current_airplane is heading to
+
+
+graphics - folder - contains all the images for the program
+	NEA1 - folder - contains the font NEA1
+		a - .jpeg file - the letter a
+		...
+		z - .jpeg file - the letter z
+		/ - .jpeg file - the character /
+
+	airplane - .jpeg file - the image for instances of Airplane
+	airport  - .jpeg file - the image for instances of Airport
+
+
+
+
+

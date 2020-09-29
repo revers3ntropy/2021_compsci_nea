@@ -1,0 +1,680 @@
+ ================================================================================================
+  |                                       Joseph Coppin                                        |
+ ================================================================================================
+
+                                  Project Name : Computer Science GSCE NEA Coursework
+
+                                     File Name : log.txt
+
+                                       Created : July 2, 2020
+
+                                   Last Update : September 4, 2020
+
+ ------------------------------------------------------------------------------------------------
+
+  						 Information about when I worked on this project.
+
+ ================================================================================================
+
+Total time spent on project: 743 mins = 12 hrs 23 mins
+
+									:==-   Log:	 -==:
+
+=================================================================================================
+
+Date       - 02/07/2020
+Start time - 12:35 pm
+End time   - 1:02 pm
+Breaks     - 0 mins
+Time       - 28 mins
+Stage 	   - planning
+
+Changes:
+ - Created this project in Repl.it
+ - Created this document, and added information header and log
+ - Created time_manegement, to_do and data_structures files, and added header
+ - Created the Report folder, and added the four report documents with headers
+
+=================================================================================================
+
+Date 	   - 02/07/2020
+Start time - 1:30 pm
+End time   - 1:50 pm
+Breaks     - 0 mins
+Time       - 20 mins
+Stage      - planning
+
+Changes:
+ - added lots of details to the data structure plan
+
+=================================================================================================
+
+Date 	   - 02/07/2020
+Start time - 2:00 pm
+End time   - 2:07 pm
+Breaks     - 0 mins
+Time       - 7 mins
+Stage      - planning
+
+Changes:
+ - added some more to the data structure document
+
+=================================================================================================
+
+Date 	   - 02/07/2020
+Start time - 3:20 pm
+End time   - 3:35 pm
+Breaks     - 1 mins
+Time       - 14 mins
+Stage      - planning & coding
+
+Changes:
+ - created comment_template file and put the templates in it
+ - added a header and very basic funcionality to main.py
+ - created globals.py under progam_listing
+ - started making an MVP
+
+=================================================================================================
+
+Date 	   - 02/07/2020
+Start time - 5:00 pm
+End time   - 5:35 pm
+Breaks     - 1 mins
+Time       - 34 mins
+Stage      - write-up
+
+Changes:
+ - worked on the report
+ - started work on the MVP pseudocode
+
+=================================================================================================
+
+Date 	   - 06/07/2020
+Start time - 11:20 am
+End time   - 11:35 pm
+Breaks     - 0 mins
+Time       - 15 mins
+Stage      - programing
+
+Changes:
+ - made the files init.py, menu.py, tick.py and added header comments
+ - seperated out the main.py file into init.py and tick.py
+
+=================================================================================================
+Date 	   - 06/07/2020
+Start time - 2:00 pm
+End time   - 2:15 pm
+Breaks     - 0 mins
+Time       - 15 mins
+Stage      - programming
+
+Changes:
+ - created the basic Airport class
+ - started looking into opening and reading files in python
+
+=================================================================================================
+Date 	   - 06/07/2020
+Start time - 5:55 pm
+End time   - 6:15 pm
+Breaks     - 0 mins
+Time       - 20 mins
+Stage      - programming
+
+Changes:
+ - created the airplane class
+ - created the CSV file reader
+ - initialise the airport objects
+ - created the airplane data dict, and put the data from the spec sheet
+
+=================================================================================================
+Date 	   - 06/07/2020
+Start time - 8:45 am
+End time   - 9:05 am
+Breaks     - 0 mins
+Time       - 20 mins
+Stage      - programming
+
+Changes:
+ - added to the initialisation
+ - made very basic menu
+
+=================================================================================================
+Date 	   - 08/07/2020
+Start time - 4:30 pm
+End time   - 5:10 pm
+Breaks     - 5 mins
+Time       - 35 mins
+Stage      - programming
+
+Changes:
+ - finished menu function 'get details'
+ - tried to fix import bug
+ - fixed some bugs:
+	- the program would start on the 'get details' menu option
+	- the 'get details' menu option would not allow you to enter any details
+
+=================================================================================================
+Date 	   - 09/07/2020
+Start time - 10:50 am
+End time   - 11:20 am
+Breaks     - 1 mins
+Time       - 29 mins
+Stage      - programming
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+Changes:
+ - worked on the menu options - 'enter airport details' and general
+
+=================================================================================================
+Date 	   - 10/07/2020
+Start time - 3:00 pm
+End time   - 3:34 pm
+Breaks     - 0 mins
+Time       - 34 mins
+Stage      - programming
+
+Changes:
+ - finished the 'enter flight details' menu option, and bug fixed it
+
+=================================================================================================
+Date 	   - 20/07/2020
+Start time - 10:32 am
+End time   - 10:59 am
+Breaks     - 0 mins
+Time       - 27 mins
+Stage      - programming MVP
+
+Changes:
+ - put the layout down for the flight profit menu option
+
+=================================================================================================
+Date 	   - 22/07/2020
+Start time - 11:36 am
+End time   - 11:55 am
+Breaks     - 0 mins
+Time       - 19 mins
+Stage      - programming
+
+Changes:
+ - Finished off the flight profit menu option
+ - started debugging the MVP
+
+=================================================================================================
+Date 	   - 25/07/2020
+Start time - 5:05 pm
+End time   - 5:17 pm
+Breaks     - 0 mins
+Time       - 12 mins
+Stage      - programming
+
+Changes:
+ - Added support for full version on top of MVP
+ - added all current program files to folder 'text' in folder 'program_listing' for better 
+ 	organisation
+=======
+
+Changes:
+ - worked on the menu options - 'enter airport details' and general
+=======
+
+Changes:
+ - worked on the menu options - 'enter airport details' and general
+=======
+
+Changes:
+ - worked on the menu options - 'enter airport details' and general
+
+=================================================================================================
+Date 	   - 10/07/2020
+Start time - 3:00 pm
+End time   - 3:34 pm
+Breaks     - 0 mins
+Time       - 34 mins
+Stage      - programming
+
+Changes:
+ - finished the 'enter flight details' menu option, and bug fixed it
+
+=================================================================================================
+Date 	   - 20/07/2020
+Start time - 10:32 am
+End time   - 10:59 pm
+Breaks     - 0 mins
+Time       - 27 mins
+Stage      - programming MVP
+
+Changes:
+ - put the layout down for the flight profit menu option
+
+=================================================================================================
+Date 	   - 22/07/2020
+Start time - 11:36 am
+End time   - 11:55 pm
+Breaks     - 0 mins
+Time       - 19 mins
+Stage      - programming
+
+Changes:
+ - Finished off the flight profit menu option
+ - started debugging the MVP
+>>>>>>> origin/master
+
+=================================================================================================
+Date 	   - 10/07/2020
+Start time - 3:00 pm
+End time   - 3:34 pm
+Breaks     - 0 mins
+Time       - 34 mins
+Stage      - programming
+
+Changes:
+ - finished the 'enter flight details' menu option, and bug fixed it
+
+=================================================================================================
+Date 	   - 20/07/2020
+Start time - 10:32 am
+End time   - 10:59 pm
+Breaks     - 0 mins
+Time       - 27 mins
+Stage      - programming MVP
+
+Changes:
+ - put the layout down for the flight profit menu option
+
+=================================================================================================
+Date 	   - 22/07/2020
+Start time - 11:36 am
+End time   - 11:55 pm
+Breaks     - 0 mins
+Time       - 19 mins
+Stage      - programming
+
+Changes:
+ - Finished off the flight profit menu option
+ - started debugging the MVP
+>>>>>>> origin/master
+
+=================================================================================================
+Date 	   - 10/07/2020
+Start time - 3:00 pm
+End time   - 3:34 pm
+Breaks     - 0 mins
+Time       - 34 mins
+Stage      - programming
+
+Changes:
+ - finished the 'enter flight details' menu option, and bug fixed it
+
+=================================================================================================
+Date 	   - 20/07/2020
+Start time - 10:32 am
+End time   - 10:59 pm
+Breaks     - 0 mins
+Time       - 27 mins
+Stage      - programming MVP
+
+Changes:
+ - put the layout down for the flight profit menu option
+
+=================================================================================================
+Date 	   - 22/07/2020
+Start time - 11:36 am
+End time   - 11:55 pm
+Breaks     - 0 mins
+Time       - 19 mins
+Stage      - programming
+
+Changes:
+ - Finished off the flight profit menu option
+ - started debugging the MVP
+>>>>>>> origin/master
+
+=================================================================================================
+Date 	   - 25/07/2020
+Start time - 7:35 pm
+End time   - 8:00 pm
+Breaks     - 0 mins
+Time       - 25 mins
+Stage      - programming
+
+Changes:
+ - added many files to the full folder
+ - brought over a text-writing system from previous project (my work, but not counted in the time)
+ - brought over a buttons system from the same previous project
+ - commented a bunch of stuff
+
+=================================================================================================
+Date 	   - 27/07/2020
+Start time - 10:45 am
+End time   - 11:42 am
+Breaks     - 5 mins (11:00 - 11:05)
+Time       - 52 mins
+Stage      - programming
+
+Changes:
+ - fixed and fully added typing
+ - brought over the letter images from previous project
+ - added message to be diplsayed on screen initialisation
+ - added option for text-based or full versions of program
+ - researched way of importing files in repl.it
+ - fixed project heirachy of folders, now properly organised
+ - updated the README file
+
+=================================================================================================
+Date 	   - 28/07/2020
+Start time - 11:15 am
+End time   - 11:45 am
+Breaks     - 0 mins
+Time       - 30 mins
+Stage      - programming
+
+Changes:
+ - created docs for all menu options
+ - started commenting buttons.py
+ - added header to all new filed
+ - added run functions of some new files
+ - created a new button type: TextBoxWithCheck
+
+=================================================================================================
+Date 	   - 28/07/2020
+Start time - 3:15 pm
+End time   - 5:09 pm
+Breaks     - 29 mins (3:20 - 3:23) (3:40 - 3:54) (4:24 - 4:32) (4:39 - 4:45)
+Time       - 85 mins
+Stage      - programming
+
+Changes:
+ - added in quit button to main menu
+ - made quit button quit the program
+ - researched getting the mouse position in pygame in repl.it (very irritating)
+ - added buttons to the main menu
+ - added functionality to all buttons
+ - tweaked positions of buttons
+ - added text boxes to the enter airport option
+ 
+
+=================================================================================================
+Date 	   - 29/07/2020
+Start time - 3:55 pm
+End time   - 4:26 pm
+Breaks     - 6 mins (4:10 - 4:16)
+Time       - 25 mins
+Stage      - programming
+
+Changes:
+ - fixed buttons in enter airport details
+ - added helpful text to the enter airpot details buttons
+ - made a outine around the standard button, rather than using dashed to show selection
+ - fixed text box checking functions
+ - attempted to figure out why on eath the pygame window was not the size it said it was
+ - failed to find why the pygame window is the wrong size
+ - added a fudge-factor to renderer.mid_x and mid_y
+
+=================================================================================================
+Date 	   - 29/07/2020
+Start time - 9:15 pm
+End time   - 9:32 pm
+Breaks     - 0 mins
+Time       - 17 mins
+Stage      - programming
+
+Changes:
+ - started work on the enter flight details menu option
+
+=================================================================================================
+Date 	   - 29/07/2020
+Start time - 8:52 pm
+End time   - 9:25 pm
+Breaks     - 0 mins
+Time       - 33 mins
+Stage      - programming
+
+Changes:
+ - finished off enter flight details menu option
+ - added 'get_info' document with header
+ - created get info option from the enter flight details option
+ - added in the info and a back button
+ - bug fixed!
+
+=================================================================================================
+Date 	   - 31/07/2020
+Start time - 11:25 am
+End time   - 12:03 pm
+Breaks     - 0 mins
+Time       - 38 mins
+Stage      - programming
+
+Changes:
+ - created three new files, all three calc_profit files
+ - added headers and a run function to each
+ - made the data file run when the calculate profits button is pressed on the main menu
+ - added text boxes and buttons to the data file, and linked it to the enter and info files
+ - added checks into the data file for the data entered
+
+=================================================================================================
+Date 	   - 31/07/2020
+Start time - 1:02 pm
+End time   - 1:14 pm
+Breaks     - 0 mins
+Time       - 12 mins
+Stage      - programming
+
+Changes:
+ - fixed calc_profit_data
+ - fixed curser.get_new_click()
+
+=================================================================================================
+Date 	   - 31/07/2020
+Start time - 5:50 pm
+End time   - 6:02 pm
+Breaks     - 0 mins
+Time       - 12 mins
+Stage      - programming
+
+Changes:
+ - did the calc_profits data and info pages
+
+=================================================================================================
+Date 	   - 31/07/2020
+Start time - 7:02 pm
+End time   - 7:53 pm
+Breaks     - 1 mins (7:23 - 7:24)
+Time       - 49 mins
+Stage      - programming
+
+Changes:
+ - bug-fixed calc-profit menu option
+ - commented buttons.py (so many functions!)
+ - updated the README file
+ - tested and checked various menu options
+
+=================================================================================================
+Date 	   - 26/08/2020
+Start time - 11:40 am
+End time   - 12:15 pm
+Breaks     - 0 mins
+Time       - 35 mins
+Stage      - programming
+
+Changes:
+ - made a class for the program in main.py called Program
+ - general tidying up of main.py, airports.py and buttons.py
+ - updated README file
+=======
+
+Changes:
+ - worked on the menu options - 'enter airport details' and general
+
+=================================================================================================
+Date 	   - 10/07/2020
+Start time - 3:00 pm
+End time   - 3:34 pm
+Breaks     - 0 mins
+Time       - 34 mins
+Stage      - programming
+
+Changes:
+ - finished the 'enter flight details' menu option, and bug fixed it
+
+=================================================================================================
+Date 	   - 20/07/2020
+Start time - 10:32 am
+End time   - 10:59 pm
+Breaks     - 0 mins
+Time       - 27 mins
+Stage      - programming MVP
+
+Changes:
+ - put the layout down for the flight profit menu option
+
+=================================================================================================
+Date 	   - 22/07/2020
+Start time - 11:36 am
+End time   - 11:55 pm
+Breaks     - 0 mins
+Time       - 19 mins
+Stage      - programming
+
+Changes:
+=======
+
+Changes:
+ - worked on the menu options - 'enter airport details' and general
+
+=================================================================================================
+Date 	   - 10/07/2020
+Start time - 3:00 pm
+End time   - 3:34 pm
+Breaks     - 0 mins
+Time       - 34 mins
+Stage      - programming
+
+Changes:
+ - finished the 'enter flight details' menu option, and bug fixed it
+
+=================================================================================================
+Date 	   - 20/07/2020
+Start time - 10:32 am
+End time   - 10:59 pm
+Breaks     - 0 mins
+Time       - 27 mins
+Stage      - programming MVP
+
+Changes:
+ - put the layout down for the flight profit menu option
+
+=================================================================================================
+Date 	   - 22/07/2020
+Start time - 11:36 am
+End time   - 11:55 pm
+Breaks     - 0 mins
+Time       - 19 mins
+Stage      - programming
+
+Changes:
+ - Finished off the flight profit menu option
+ - started debugging the MVP
+
+=================================================================================================
+Date 	   - 04/09/2020
+Start time - 2:10 pm
+End time   - 2:23 pm
+Breaks     - 0 mins
+Time       - 13 mins
+Stage      - programming
+
+Changes:
+ - Found this version! (after doing a bunch of changes on another version and losing it...)
+ - Fixed the main.py and README files from the stupid repl.it version control text additions
+    TO THE ACTUAL CODE. 
+
+=================================================================================================
+Date 	   - 21/09/2020
+Start time - 16:25 pm
+End time   - 16:29 pm
+Breaks     - 0 mins
+Time       - 4 mins
+Stage      - programming
+
+Changes:
+ - tried to fix a bug
+
+=================================================================================================
+Date 	   - 27/09/2020
+Start time - 3:35 pm
+End time   - 4:27 pm
+Breaks     - 4 mins
+Time       - 52 mins
+Stage      - programming
+
+Changes:
+ - fixed bug in calc_profit_enter
+ - started to introduce preset:
+    - made load, save and preset_controller files
+    - added in load and save functions to preset_controller
+
+=================================================================================================
+Date 	   - 28/09/2020
+Start time - 4:08 pm
+End time   - 4:14 pm
+Breaks     - 0 mins
+Time       - 6 mins
+Stage      - programming
+
+Changes:
+ - added functionality buttons to save page
+
+=================================================================================================
+Date 	   - 29/09/2020
+Start time - 9:00 pm
+End time   - 10:00 pm
+Breaks     - 5 mins
+Time       - 55 mins
+Stage      - programming
+
+Changes:
+ - finished saving presets
+ - bug fixed saving presets
+ - finished loading presets
+ - sorted out menu for loading presets
+ - bug fixed loading presets
+ - added preset names, for unique names for each preset
+ - tested saving and loading presets
+ - added preset cap
+
+=================================================================================================
+Date 	   - 00/00/2020
+Start time - 0:00 pm
+End time   - 0:00 pm
+Breaks     - 0 mins
+Time       - 0 mins
+Stage      - programming
+
+Changes:
+ - 
+
+=================================================================================================
+Date 	   - 00/00/2020
+Start time - 0:00 pm
+End time   - 0:00 pm
+Breaks     - 0 mins
+Time       - 0 mins
+Stage      - programming
+
+Changes:
+ - 
+
+=================================================================================================
+Date 	   - 00/00/2020
+Start time - 0:00 pm
+End time   - 0:00 pm
+Breaks     - 0 mins
+Time       - 0 mins
+Stage      - programming
+
+Changes:
+ - 
+
+=================================================================================================
