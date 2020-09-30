@@ -12,9 +12,9 @@ import program_listing.full.preset_controller as preset_controller
 #
 #                                     File Name : file_name.py
 #
-#                                       Created : month 00, 2020
+#                                       Created : September 28, 2020
 #
-#                                   Last Update : month 00, 2020
+#                                   Last Update : September 30, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #

@@ -1,9 +1,9 @@
 import pygame as py
 import program_listing.full.renderer as renderer
 
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
+# ==================================================================================================
+# |                                         Joseph Coppin                                          |
+# ==================================================================================================
 #
 #                                  Project Name : Computer Science GSCE Coursework
 #
@@ -11,71 +11,44 @@ import program_listing.full.renderer as renderer
 #
 #                                       Created : July 25, 2020
 #
-#                                   Last Update : July 25, 2020
+#                                   Last Update : September 30, 2020
 #
-# ------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------
 #
 #                               Controls the typing function of the program.
 #
-# ------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------
 #
 # Imports:
 # 	pygame
 #   renderer
 #
-# ------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------
 #
 #   write           - writes the contents of a string on the screen, centered
 #   write_from_left - writes a string on the screen from the left
 #
-# ================================================================================================
+# ==================================================================================================
 
 
 # which characters are capable of being typed by this system
 typeable_characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-                       'p', 'q', 'r', 's',
-                       't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8',
-                       '9', '0']
+                       'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4',
+                       '5', '6', '7', '8', '9', '0']
 
 # the pygame codes of all type-able characters
 typeable_characters_py_game = [py.K_a, py.K_b, py.K_c, py.K_d, py.K_e, py.K_f, py.K_g, py.K_h,
-                               py.K_i, py.K_j, py.K_k, py.K_l,
-                               py.K_m, py.K_n, py.K_o, py.K_p, py.K_q, py.K_r, py.K_s, py.K_t,
-                               py.K_u, py.K_v, py.K_w, py.K_x,
+                               py.K_i, py.K_j, py.K_k, py.K_l, py.K_m, py.K_n, py.K_o, py.K_p,
+                               py.K_q, py.K_r, py.K_s, py.K_t, py.K_u, py.K_v, py.K_w, py.K_x,
                                py.K_y, py.K_z, py.K_1, py.K_2, py.K_3, py.K_4, py.K_5, py.K_6,
                                py.K_7, py.K_8, py.K_9, py.K_0]
 
 # codes for each letter
-a = 1
-b = 2
-c = 3
-d = 4
-e = 5
-f = 6
-g = 7
-h = 8
-i = 9
-j = 10
-k = 11
-l = 12
-m = 13
-n = 14
-o = 15
-p = 16
-q = 17
-r = 18
-s = 19
-t = 20
-u = 21
-v = 22
-w = 23
-x = 24
-y = 25
-z = 26
+a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z = \
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26
 
 # codes for the size of the font, in pixels
-size_x = 27
-size_y = 28
+size_x, size_y = 27, 28
 
 # codes for the names of the fonts
 chaos_14x16 = 29

@@ -7,11 +7,11 @@ import pickle
 #
 #                                  Project Name : Computer Science GSCE Coursework
 #
-#                                     File Name : file_name.py
+#                                     File Name : preset_controller.py
 #
-#                                       Created : month 00, 2020
+#                                       Created : September 28, 2020
 #
-#                                   Last Update : month 00, 2020
+#                                   Last Update : September 30, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #

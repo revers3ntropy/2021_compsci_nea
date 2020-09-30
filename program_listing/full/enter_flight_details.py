@@ -11,9 +11,9 @@ import program_listing.full.typing as typing
 #
 #                                     File Name : file_name.py
 #
-#                                       Created : month 00, 2020
+#                                       Created : September 28, 2020
 #
-#                                   Last Update : month 00, 2020
+#                                   Last Update : September 30, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #

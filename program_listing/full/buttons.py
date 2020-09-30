@@ -16,7 +16,7 @@ import program_listing.full.global_data as global_data
 #
 #                                       Created : July 27, 2020
 #
-#                                   Last Update : September 4, 2020
+#                                   Last Update : September 30, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
