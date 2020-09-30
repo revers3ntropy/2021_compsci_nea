@@ -27,9 +27,6 @@ import program_listing.full.typing as typing
 #
 # ================================================================================================
 
-screen = None
-clock = None
-
 screen_x = 1000
 screen_y = 600
 mid_x = screen_x / 2 - 100  # why repl, why?!

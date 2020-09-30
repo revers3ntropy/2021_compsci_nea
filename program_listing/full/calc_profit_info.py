@@ -17,7 +17,7 @@ import program_listing.full.renderer as renderer
 #
 # ------------------------------------------------------------------------------------------------
 #
-#                  Diplsays the info for the menu option 'calculate profit'.
+#                  Displays the info for the menu option 'calculate profit'.
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -35,7 +35,8 @@ import program_listing.full.renderer as renderer
 
 main_menu_button = buttons.StandardButton(
     renderer.mid_x, renderer.mid_y + 200, typing.retro_8x10, 'main menu'
-    )
+)
+
 
 # ================================================================================================
 #  run -- runs and controls the menu option
@@ -47,13 +48,10 @@ main_menu_button = buttons.StandardButton(
 #  CREATED: 28/07/2020
 # ================================================================================================
 def run():
-
     typing.write(typing.retro_8x10, 'Route stats:', (renderer.mid_x, renderer.mid_y - 175))
 
     if main_menu_button.run():
         return global_data.main_menu
-
-    airport_dist = 0
 
     def find_overseas_airport(airport_code):
         for airport in global_data.list_of_airports:
@@ -64,16 +62,24 @@ def run():
         airport_dist = find_overseas_airport(global_data.overseas_airport).dist_LJL
     else:
         airport_dist = find_overseas_airport(global_data.overseas_airport).dist_BI
-        
-    standard_seats = int(global_data.airplane_types_data[global_data.airplane_type][global_data.max_capasity]) - int(global_data.first_seats) * 2
-    cost_per_seat = global_data.airplane_types_data[global_data.airplane_type][global_data.running_cost] * airport_dist / 100
+
+    standard_seats = int(
+        global_data.airplane_types_data[global_data.airplane_type][global_data.max_capacity]) - int(
+        global_data.first_seats) * 2
+    cost_per_seat = global_data.airplane_types_data[global_data.airplane_type][
+                        global_data.running_cost] * airport_dist / 100
     cost = float(cost_per_seat) * (float(global_data.first_seats) + float(standard_seats))
-    income = float(global_data.first_seats) * float(global_data.first_price) + standard_seats * float(global_data.standard_price)
+    income = float(global_data.first_seats) * float(
+        global_data.first_price) + standard_seats * float(global_data.standard_price)
     profit = income - cost
 
-    typing.write(typing.retro_8x10, 'The flight costs ' + str(cost_per_seat) + ' per seat.', (renderer.mid_x, renderer.mid_y - 100))
-    typing.write(typing.retro_8x10, 'The flight costs ' + str(cost) + ' in total.', (renderer.mid_x, renderer.mid_y - 50))
-    typing.write(typing.retro_8x10, 'The flight has a total income of ' + str(income) + '.', (renderer.mid_x, renderer.mid_y))
-    typing.write(typing.retro_8x10, "The flight's profit is " + str(profit) + '.', (renderer.mid_x, renderer.mid_y + 50))
+    typing.write(typing.retro_8x10, 'The flight costs ' + str(cost_per_seat) + ' per seat.',
+                 (renderer.mid_x, renderer.mid_y - 100))
+    typing.write(typing.retro_8x10, 'The flight costs ' + str(cost) + ' in total.',
+                 (renderer.mid_x, renderer.mid_y - 50))
+    typing.write(typing.retro_8x10, 'The flight has a total income of ' + str(income) + '.',
+                 (renderer.mid_x, renderer.mid_y))
+    typing.write(typing.retro_8x10, "The flight's profit is " + str(profit) + '.',
+                 (renderer.mid_x, renderer.mid_y + 50))
 
     return global_data.calc_pofit_info

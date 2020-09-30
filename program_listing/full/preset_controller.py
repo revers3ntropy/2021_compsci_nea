@@ -59,8 +59,8 @@ def load_presets():
         return pickle.load(pickle_file)
 
 
-def load_in_preset(id):
-    preset = presets[id]
+def load_in_preset(id_):
+    preset = presets[id_]
 
     global_data.uk_airport = preset.uk_airport
     global_data.overseas_airport = preset.overseas_airport
@@ -80,7 +80,7 @@ except Exception:
         presets[i] = 0
 
 
-class Preset():
+class Preset:
     def __init__(self):
         self.name = ''
         self.uk_airport = ''

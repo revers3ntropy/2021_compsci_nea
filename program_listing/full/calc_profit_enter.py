@@ -17,7 +17,7 @@ import program_listing.full.renderer as renderer
 #
 # ------------------------------------------------------------------------------------------------
 #
-#   Controls the screren for if data still needs to be entered when calc profit buton is pressed.
+#   Controls the screen for if data still needs to be entered when calc profit button is pressed.
 #
 # ------------------------------------------------------------------------------------------------
 #

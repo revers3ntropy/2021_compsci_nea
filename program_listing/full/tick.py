@@ -1,6 +1,6 @@
 import program_listing.full.renderer as renderer
 import program_listing.full.global_data as global_data
-import program_listing.full.curser as curser
+import program_listing.full.cursor as cursor
 import program_listing.full.calc_profit_info as calculate_profit_info
 import program_listing.full.calc_profit_enter as calculate_profit_enter
 import program_listing.full.calc_profit_data as calculate_profit_data
@@ -60,9 +60,9 @@ def tick():
 
     global_data.session_tick += 1
 
-    curser.update_mouse_clicked()
+    cursor.update_mouse_clicked()
 
-    # renderer.curser()
+    # renderer.cursor()
 
     state = global_data.session_state
 

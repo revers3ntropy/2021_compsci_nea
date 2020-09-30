@@ -14,7 +14,7 @@ import program_listing.full.global_data as global_data
 #
 # ------------------------------------------------------------------------------------------------
 #
-#                                       Clears all inputed data.
+#                                       Clears all inputted data.
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -27,10 +27,11 @@ import program_listing.full.global_data as global_data
 #
 # ================================================================================================
 
+
 # ================================================================================================
 #  clear -- Clears all inputted data
 #
-#      Resets all data which can be inputed by the user to hard-coded 'reset' values.
+#      Resets all data which can be inputted by the user to hard-coded 'reset' values.
 #
 #  INPUT:  none
 #

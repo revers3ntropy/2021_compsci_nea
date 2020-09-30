@@ -1,13 +1,14 @@
 import pygame as py
 import program_listing.full.global_data as global_data
 
+
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
 #
 #                                  Project Name : Computer Science GSCE Coursework
 #
-#                                     File Name : curser.py
+#                                     File Name : cursor.py
 #
 #                                       Created : July 27, 2020
 #
@@ -26,7 +27,7 @@ import program_listing.full.global_data as global_data
 # ------------------------------------------------------------------------------------------------
 #
 #	update_mouse_clicked  - updates the mouse clicks history
-#	check_mouse_collision - checks if thecurser is collising with a hitbox passed in
+#	check_mouse_collision - checks if the cursor is colliding with a hitbox passed in
 #	check_new_click		  - checks for new mouse click
 #
 # ================================================================================================
@@ -34,7 +35,7 @@ import program_listing.full.global_data as global_data
 # ================================================================================================
 #  update_mouse_clicked -- updates the mouse clicks history
 #
-#      Checks for a new mouse press, and based on that updtaes the global mouse click history.
+#      Checks for a new mouse press, and based on that updates the global mouse click history.
 #
 #  INPUT:  none
 #
@@ -51,28 +52,29 @@ def update_mouse_clicked():
 
 
 # ================================================================================================
-#  check_mouse_collision -- checks wther or not the curser is in a hitbox passed in
+#  check_mouse_collision -- checks whether or not the cursor is in a hitbox passed in
 #
-#      Checks wether or not the curser is inside a rectangle passed in, and returns te result.
+#      Checks whether or not the cursor is inside a rectangle passed in, and returns te result.
 #
 #  INPUT:  hit_box - tuple - a four-dimensional vector containing the coordinates of the top 
-#							 left cornere of the rect, and the size of the rect.
+#							 left corner of the rect, and the size of the rect.
 #
 #  RETURNS:  none
 #
 #  CREATED: 27/07/2020
 # ================================================================================================
 def check_mouse_collision(hit_box):
-	py.event.get()
-	mouse_pos = py.mouse.get_pos()
-	if hit_box[0] < mouse_pos[0] < hit_box[0]+hit_box[2] and hit_box[1] < mouse_pos[1] < hit_box[1]+hit_box[3]:
-		return True
-	else:
-		return False
+    py.event.get()
+    mouse_pos = py.mouse.get_pos()
+    if hit_box[0] < mouse_pos[0] < hit_box[0] + hit_box[2] and \
+            hit_box[1] < mouse_pos[1] < hit_box[1] + hit_box[3]:
+        return True
+    else:
+        return False
 
 
 # ================================================================================================
-#  check_new_click -- checks wether or not a new click has been deteccted, as of the last update. 
+#  check_new_click -- checks whether or not a new click has been detected, as of the last update.
 #
 #      more detailed function description
 #
@@ -83,7 +85,7 @@ def check_mouse_collision(hit_box):
 #  CREATED: 00/00/2020
 # ================================================================================================
 def check_new_click():
-	if py.mouse.get_pressed()[0] and not global_data.mouse_pressed:
-		return True
-	else:
-		return False
+    if py.mouse.get_pressed()[0] and not global_data.mouse_pressed:
+        return True
+    else:
+        return False

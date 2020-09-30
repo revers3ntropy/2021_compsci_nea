@@ -1,9 +1,10 @@
+import time
+import pygame as py
+
 import program_listing.full.global_data as global_data
 import program_listing.full.buttons as buttons
 import program_listing.full.typing as typing
 import program_listing.full.renderer as renderer
-import time
-import pygame as py
 
 # ================================================================================================
 # |                                       Joseph Coppin                                         |

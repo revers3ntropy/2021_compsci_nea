@@ -1,9 +1,10 @@
 import pygame as py
 
 import program_listing.full.typing as typing
-import program_listing.full.curser as curser
+import program_listing.full.cursor as cursor
 import program_listing.full.renderer as renderer
 import program_listing.full.global_data as global_data
+
 
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
@@ -25,7 +26,7 @@ import program_listing.full.global_data as global_data
 #
 # Imports:
 # 	typing
-#	curser
+#	cursor
 #	renderer
 #	pygame
 #	global_data
@@ -36,15 +37,15 @@ import program_listing.full.global_data as global_data
 #	__init__
 #	display       - displays the buttons current message
 #	check_mouse   - checks whether or not the mouse is colliding with the button object
-#	check_clicked - checks wether or not the button has been clicked
+#	check_clicked - checks whether or not the button has been clicked
 #
 # class 'StandardButton(Buttons)' functions:
 #	__init__
-#	run       - contols displaying and pressing the button
+#	run       - controls displaying and pressing the button
 #
 # class 'SwitchButton(Buttons)' functions:
 #	__init__
-#	run          - contols displaying and pressing the button
+#	run          - controls displaying and pressing the button
 #	switch_state - flips through the buttons possible states
 #
 # class 'TextButton(Buttons)' functions:
@@ -65,144 +66,152 @@ import program_listing.full.global_data as global_data
 #
 # ================================================================================================
 class Buttons:
-	# ================================================================================================
-	#  __init__
-	#
-	#  INPUT:  x, y - int - the coordinates of the button, from the center
-	#		   font -  int  - what font should the button use
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  __init__
+    #
+    #  INPUT:  x, y - int - the coordinates of the button, from the center
+    #		   font -  int  - what font should the button use
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def __init__(self, x, y, font):
         self.x = x
         self.y = y
         self.font = font
         self.moused = False
 
-	# ================================================================================================
-	#  display -- writes the message of the button on the screen
-	#
-	#  INPUT:  message - string -  what should be displayed
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  display -- writes the message of the button on the screen
+    #
+    #  INPUT:  message - string -  what should be displayed
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def display(self, message):
         typing.write(self.font, message, (self.x, self.y))
 
-	# ================================================================================================
-	#  check_mouse -- returns wether or not the mouse is touching the button
-	#
-	#  INPUT:  hit_box - tuple(4, int)- the hitbox of the button, or the hitbox of where you want to check
-	#
-	#  RETURNS:  bool - is the mouse touching the button
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  check_mouse -- returns whether or not the mouse is touching the button
+    #
+    #  INPUT:  hit_box - tuple(4, int)- the hitbox of the button, or the hitbox of where you want to check
+    #
+    #  RETURNS:  bool - is the mouse touching the button
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def check_mouse(self, hit_box):
-        if curser.check_mouse_collision(hit_box):
+        if cursor.check_mouse_collision(hit_box):
             self.moused = True
         else:
             self.moused = False
 
-	# ================================================================================================
-	#  check_clicked -- returns wether or not the button is being clicked or not
-	#
-	#      checks if the button is being touched by the mouse, and then if the program has regestered 
-	#		a new click.
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  bool - wether or not the button has been pressed
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  check_clicked -- returns whether or not the button is being clicked or not
+    #
+    #      checks if the button is being touched by the mouse, and then if the program has registered
+    #		a new click.
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  bool - whether or not the button has been pressed
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def check_clicked(self):
-        if self.moused and curser.check_new_click():
+        if self.moused and cursor.check_new_click():
             return True
         return False
 
 
 class StandardButton(Buttons):
-	# ================================================================================================
-	#  __init__
-	#
-	#  INPUT:  x, y     - int  - coordinates of the button, taken from Button class
-	#		   font     -  int   - which font should used for the button - taken from Button
-	#		   messaage - string - what should the button say
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
-	def __init__(self, x, y, font, message):
-		super().__init__(x, y, font)
-		self.message = message
-		self.size_x = (typing.fonts[font][typing.size_x]+5) * len(message)
-		self.hit_box = (x-self.size_x/2 - 7, y-typing.fonts[font][typing.size_y]/2 - 7, self.size_x + 14, typing.fonts[font][typing.size_y] + 14)
+    # ================================================================================================
+    #  __init__
+    #
+    #  INPUT:  x, y     - int  - coordinates of the button, taken from Button class
+    #		   font     -  int   - which font should used for the button - taken from Button
+    #		   message - string - what should the button say
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
+    def __init__(self, x, y, font, message):
+        super().__init__(x, y, font)
+        self.message = message
+        self.size_x = (typing.fonts[font][typing.size_x] + 5) * len(message)
+        self.hit_box = (
+            x - self.size_x / 2 - 7, y - typing.fonts[font][typing.size_y] / 2 - 7,
+            self.size_x + 14,
+            typing.fonts[font][typing.size_y] + 14)
 
-		self.selected_colour = (renderer.background_colour[0] - 100, renderer.background_colour[1] - 100, renderer.background_colour[2] - 100)
-		self.outside_colour = (renderer.background_colour[0] - 50, renderer.background_colour[1] - 50, renderer.background_colour[2] - 50)
-		self.inside_colour = renderer.background_colour
+        self.selected_colour = (
+            renderer.background_colour[0] - 100, renderer.background_colour[1] - 100,
+            renderer.background_colour[2] - 100)
+        self.outside_colour = (
+            renderer.background_colour[0] - 50, renderer.background_colour[1] - 50,
+            renderer.background_colour[2] - 50)
+        self.inside_colour = renderer.background_colour
 
-	# ================================================================================================
-	#  display_box -- draws a box around the button
-	#
-	#      Uses the hitbox to draw two rectangles of slightly different sizes on top of each other,
-	#		thus drawing a background and outline to the button. Also is effected by self.moused
-	#		which is if the button is being touched by the curser.
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
-	def display_box(self):
-		if self.moused:
-			py.draw.rect(renderer.screen, self.selected_colour, self.hit_box)
-		else:
-			py.draw.rect(renderer.screen, self.outside_colour, self.hit_box)
-		new_hit_box = (self.hit_box[0]+2, self.hit_box[1]+2, self.hit_box[2]-4, self.hit_box[3]-4)
-		py.draw.rect(renderer.screen, self.inside_colour, new_hit_box)
+    # ================================================================================================
+    #  display_box -- draws a box around the button
+    #
+    #      Uses the hitbox to draw two rectangles of slightly different sizes on top of each other,
+    #		thus drawing a background and outline to the button. Also is effected by self.moused
+    #		which is if the button is being touched by the cursor.
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
+    def display_box(self):
+        if self.moused:
+            py.draw.rect(renderer.screen, self.selected_colour, self.hit_box)
+        else:
+            py.draw.rect(renderer.screen, self.outside_colour, self.hit_box)
+        new_hit_box = (
+            self.hit_box[0] + 2, self.hit_box[1] + 2, self.hit_box[2] - 4, self.hit_box[3] - 4)
+        py.draw.rect(renderer.screen, self.inside_colour, new_hit_box)
 
-	# ================================================================================================
-	#  run -- runs the button, and returns wether it is being pressed or not
-	#
-	#      Controls the button's tick, by drawing the button, updating self.moused, and returning 
-	#		True if it being clicked on.
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
-	def run(self):
-		self.display_box()
-		self.check_mouse(self.hit_box)
-		self.display(self.message)
+    # ================================================================================================
+    #  run -- runs the button, and returns whether it is being pressed or not
+    #
+    #      Controls the button's tick, by drawing the button, updating self.moused, and returning
+    #		True if it being clicked on.
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
+    def run(self):
+        self.display_box()
+        self.check_mouse(self.hit_box)
+        self.display(self.message)
 
-		if self.check_clicked():
-			return True
+        if self.check_clicked():
+            return True
 
 
-class SwitchButton(Buttons): # not used in this project, but I might as well include it
-	# ================================================================================================
-	#  __init__
-	#
-	#  INPUT:  x, y - int - coordinates of the button from the center
-	#		   font - int - what font should be used for the button
-	#		   states - list[n, string] - all states the button could be in, displayed on the button
-	#		   starting_state - int - which state should start on, normally 0
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 00/00/2020
-	# ================================================================================================
+class SwitchButton(Buttons):  # not used in this project, but I might as well include it
+    # ================================================================================================
+    #  __init__
+    #
+    #  INPUT:  x, y - int - coordinates of the button from the center
+    #		   font - int - what font should be used for the button
+    #		   states - list[n, string] - all states the button could be in, displayed on the button
+    #		   starting_state - int - which state should start on, normally 0
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 00/00/2020
+    # ================================================================================================
     def __init__(self, x, y, font, states, starting_state):
         super().__init__(x, y, font)
         self.states = states  # list of messages
@@ -210,47 +219,51 @@ class SwitchButton(Buttons): # not used in this project, but I might as well inc
 
         self.number_of_states = len(states)
         self.size_x = (typing.fonts[font][typing.size_x] + 5) * len(self.states[self.current_state])
-        self.hit_box = (x-self.size_x/2, y-typing.fonts[font][typing.size_y]/2, self.size_x, typing.fonts[font][typing.size_y])
+        self.hit_box = (x - self.size_x / 2, y - typing.fonts[font][typing.size_y] / 2, self.size_x,
+                        typing.fonts[font][typing.size_y])
 
-	# ================================================================================================
-	#  update_states -- pushed the state forward one
-	#
-	#      moves the button forward one step, called when the button is pressed
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  update_states -- pushed the state forward one
+    #
+    #      moves the button forward one step, called when the button is pressed
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def update_state(self):
         if self.number_of_states > 2:
-            if self.current_state >= self.number_of_states-1:
+            if self.current_state >= self.number_of_states - 1:
                 self.current_state = 1
             else:
                 self.current_state += 1
-            self.size_x = (typing.fonts[self.font][typing.size_x] + 5) * len(self.states[self.current_state])
-            self.hit_box = (self.x - self.size_x / 2, self.y - typing.fonts[self.font][typing.size_y] / 2, self.size_x,
-                            typing.fonts[self.font][typing.size_y])
+            self.size_x = (typing.fonts[self.font][typing.size_x] + 5) * len(
+                self.states[self.current_state])
+            self.hit_box = (
+                self.x - self.size_x / 2, self.y - typing.fonts[self.font][typing.size_y] / 2,
+                self.size_x,
+                typing.fonts[self.font][typing.size_y])
         else:
             if self.current_state == 1:
                 self.current_state = 0
             else:
                 self.current_state = 1
 
-	# ================================================================================================
-	#  run -- controls the button 
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  self.current_state - string - the current state of the button
-	#
-	#  CREATED: 00/00/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  run -- controls the button
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  self.current_state - string - the current state of the button
+    #
+    #  CREATED: 00/00/2020
+    # ================================================================================================
     def run(self):
         self.check_mouse(self.hit_box)
         if self.moused:
-            self.display('-'+self.states[self.current_state]+'-')
+            self.display('-' + self.states[self.current_state] + '-')
         else:
             self.display(self.states[self.current_state])
 
@@ -261,27 +274,29 @@ class SwitchButton(Buttons): # not used in this project, but I might as well inc
 
 
 class TextButton(Buttons):
-	# ================================================================================================
-	#  __init__
-	#
-	#  INPUT:  x, y - int - coodinates of the Buttons
-	#		   font - int - which font should be used
-	#		   initial_message - string - the message to be displayed when the button generates
-	#		   colour1 - tuple[3, int] - colour of the boarder of the text-box
-	#		   colour2 - tuple[3, int] - colour of the inside of the text-box
-	#		   max_length - int - the maximum number of characters the text-box can hold, also size
-	#		   selected_colour - tuple[3, int] - the colour the boarder of the text-box should be
-	#											 when the mouse is over it
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  __init__
+    #
+    #  INPUT:  x, y - int - coordinates of the Buttons
+    #		   font - int - which font should be used
+    #		   initial_message - string - the message to be displayed when the button generates
+    #		   colour1 - tuple[3, int] - colour of the boarder of the text-box
+    #		   colour2 - tuple[3, int] - colour of the inside of the text-box
+    #		   max_length - int - the maximum number of characters the text-box can hold, also size
+    #		   selected_colour - tuple[3, int] - the colour the boarder of the text-box should be
+    #											 when the mouse is over it
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def __init__(self, x, y, font, initial_message, colour1, colour2, max_length, selected_colour):
         super().__init__(x, y, font)
         self.size_x = (typing.fonts[font][typing.size_x] + 5) * max_length
-        self.hit_box = (self.x - self.size_x / 2 - 5, self.y - typing.fonts[self.font][typing.size_y] / 2 - 5, self.size_x + 10,
-                        typing.fonts[self.font][typing.size_y] + 10)
+        self.hit_box = (
+            self.x - self.size_x / 2 - 5, self.y - typing.fonts[self.font][typing.size_y] / 2 - 5,
+            self.size_x + 10,
+            typing.fonts[self.font][typing.size_y] + 10)
         self.message = initial_message
         self.initial_message = initial_message
         self.outside_colour = colour1
@@ -290,40 +305,41 @@ class TextButton(Buttons):
         self.selected = False
         self.max_length = max_length
 
-	# ================================================================================================
-	#  display_box -- draws the box of the text-box
-	#
-	#      draws the two rectagles which make the text box based on the hitbox and wehter the mouse
-	#		is touching the text-box or not
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 00/00/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  display_box -- draws the box of the text-box
+    #
+    #      draws the two rectangles which make the text box based on the hitbox and whether the mouse
+    #		is touching the text-box or not
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 00/00/2020
+    # ================================================================================================
     def display_box(self):
         if self.moused:
             py.draw.rect(renderer.screen, self.selected_colour, self.hit_box)
         else:
             py.draw.rect(renderer.screen, self.outside_colour, self.hit_box)
-        new_hit_box = (self.hit_box[0]+2, self.hit_box[1]+2, self.hit_box[2]-4, self.hit_box[3]-4)
+        new_hit_box = (
+            self.hit_box[0] + 2, self.hit_box[1] + 2, self.hit_box[2] - 4, self.hit_box[3] - 4)
         py.draw.rect(renderer.screen, self.inside_colour, new_hit_box)
 
-	# ================================================================================================
-	#  check_selected -- updates wether or not the text-box has been selected or not
-	#
-	#      checks if there has been a click, and wehter the text-box is being touched by the moused
-	#		and then updates self.selected and global_data.writing.
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  check_selected -- updates whether or not the text-box has been selected or not
+    #
+    #      checks if there has been a click, and whether the text-box is being touched by the moused
+    #		and then updates self.selected and global_data.writing.
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def check_selected(self):
-        if curser.check_new_click():
+        if cursor.check_new_click():
             if self.moused:
                 self.selected = True
                 global_data.writing = True
@@ -331,37 +347,37 @@ class TextButton(Buttons):
                 self.selected = False
                 global_data.writing = False
 
-	# ================================================================================================
-	#  remove_last_character_from_message -- removes the last charater from the current message
-	#
-	#      goes through the message and adds all but the last letter to a new list, which is returned
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  new_message - string - the result of the removal
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  remove_last_character_from_message -- removes the last character from the current message
+    #
+    #      goes through the message and adds all but the last letter to a new list, which is returned
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  new_message - string - the result of the removal
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def remove_last_character_from_message(self):
         new_message = ''
         for i in range(len(self.message)):
-            if i < len(self.message)-1:
+            if i < len(self.message) - 1:
                 new_message += self.message[i]
         return new_message
 
-	# ================================================================================================
-	#  check_message -- controls typing in the text-box
-	#
-	#      checks all keyboard inputs, abnd if one is in the list of typable charactes then it
-	#		adds it to the message. Also controls backspace, enter and space, which are all 
-	#		exceptions.
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  none
-	#
-	#  CREATED: 00/00/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  check_message -- controls typing in the text-box
+    #
+    #      checks all keyboard inputs, and if one is in the list of typeable characters then it
+    #		adds it to the message. Also controls backspace, enter and space, which are all
+    #		exceptions.
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  none
+    #
+    #  CREATED: 00/00/2020
+    # ================================================================================================
     def check_message(self):
         if self.selected and global_data.typing_sticky_keys <= 0:
             character = ''
@@ -394,17 +410,17 @@ class TextButton(Buttons):
                     else:
                         self.message += character
 
-	# ================================================================================================
-	#  run -- controls the button
-	#
-	#      runs all checks and then returns the current message
-	#
-	#  INPUT:  none
-	#
-	#  RETURNS:  self.message - string - the current message the text-box has
-	#
-	#  CREATED: 27/07/2020
-	# ================================================================================================
+    # ================================================================================================
+    #  run -- controls the button
+    #
+    #      runs all checks and then returns the current message
+    #
+    #  INPUT:  none
+    #
+    #  RETURNS:  self.message - string - the current message the text-box has
+    #
+    #  CREATED: 27/07/2020
+    # ================================================================================================
     def run(self):
         self.display_box()
         self.check_mouse(self.hit_box)
@@ -413,11 +429,12 @@ class TextButton(Buttons):
         self.display(self.message)
         return self.message
 
-class TextBoxWithCheck(Buttons): # very similar to TextButton
+
+class TextBoxWithCheck(Buttons):  # very similar to TextButton
     # ================================================================================================
     #  __init__
     #
-    #  INPUT:  x, y - int - coodinates of the Buttons
+    #  INPUT:  x, y - int - coordinates of the Buttons
     #		   font - int - which font should be used
     #		   initial_message - string - the message to be displayed when the button generates
     #		   max_length - int - the maximum number of characters the text-box can hold, also size
@@ -430,8 +447,10 @@ class TextBoxWithCheck(Buttons): # very similar to TextButton
     def __init__(self, x, y, font, initial_message, max_length, check):
         super().__init__(x, y, font)
         self.size_x = (typing.fonts[font][typing.size_x] + 5) * max_length
-        self.hit_box = (self.x - self.size_x / 2 - 5, self.y - typing.fonts[self.font][typing.size_y] / 2 - 5, self.size_x + 10,
-                        typing.fonts[self.font][typing.size_y] + 10)
+        self.hit_box = (
+            self.x - self.size_x / 2 - 5, self.y - typing.fonts[self.font][typing.size_y] / 2 - 5,
+            self.size_x + 10,
+            typing.fonts[self.font][typing.size_y] + 10)
         self.message = initial_message
         self.initial_message = initial_message
         self.selected = False
@@ -481,7 +500,7 @@ class TextBoxWithCheck(Buttons): # very similar to TextButton
     #  CREATED: 27/07/2020
     # ================================================================================================
     def check_selected(self):
-        if curser.check_new_click():
+        if cursor.check_new_click():
             if self.moused:
                 self.selected = True
                 global_data.writing = True
@@ -490,7 +509,7 @@ class TextBoxWithCheck(Buttons): # very similar to TextButton
                 global_data.writing = False
 
     # ================================================================================================
-    #  remove_last_character_from_message -- removes the last charater from the current message
+    #  remove_last_character_from_message -- removes the last character from the current message
     #
     #      goes through the message and adds all but the last letter to a new list, which is returned
     #
@@ -510,7 +529,7 @@ class TextBoxWithCheck(Buttons): # very similar to TextButton
     # ================================================================================================
     #  check_message -- controls typing in the text-box
     #
-    #      checks all keyboard inputs, abnd if one is in the list of typable charactes then it
+    #      checks all keyboard inputs, and if one is in the list of typeable characters then it
     #		adds it to the message. Also controls backspace, enter and space, which are all
     #		exceptions.
     #
@@ -527,7 +546,8 @@ class TextBoxWithCheck(Buttons): # very similar to TextButton
             for i in range(len(keys)):
                 try:
                     if keys[typing.typeable_characters_py_game[i]]:
-                        if global_data.typing_last_key != typing.typeable_characters_py_game[i] or global_data.typing_sticky_keys <= 0:
+                        if global_data.typing_last_key != typing.typeable_characters_py_game[i] or \
+                                global_data.typing_sticky_keys <= 0:
                             character = typing.typeable_characters[i]
                             global_data.typing_sticky_keys = 20
                             global_data.typing_last_key = typing.typeable_characters_py_game[i]

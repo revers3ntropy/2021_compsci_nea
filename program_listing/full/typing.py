@@ -206,11 +206,11 @@ def write(font, message, pos):
     my_font = fonts[font]
     message = str.lower(message)
     if len(message) > 0:
-        for i in range(len(message)):
-            if message[i] != ' ':
-                letter_image = my_font[message[i]]
+        for i_ in range(len(message)):
+            if message[i_] != ' ':
+                letter_image = my_font[message[i_]]
                 pos_y = pos[1] - my_font[size_y] / 2
-                pos_x = (i - (len(message) / 2)) * (my_font[size_x] + 5) + pos[0]
+                pos_x = (i_ - (len(message) / 2)) * (my_font[size_x] + 5) + pos[0]
                 renderer.screen.blit(letter_image, (pos_x, pos_y))
 
 
@@ -232,9 +232,9 @@ def write_from_left(font, message, pos):
     my_font = fonts[font]
     message = str.lower(message)
     if len(message) > 0:
-        for i in range(len(message)):
-            if message[i] != ' ':
-                letter_image = my_font[message[i]]
+        for _i in range(len(message)):
+            if message[_i] != ' ':
+                letter_image = my_font[message[_i]]
                 pos_y = pos[1] - my_font[size_y] / 2
-                pos_x = i * (my_font[size_x] + 20) + pos[0]
+                pos_x = _i * (my_font[size_x] + 20) + pos[0]
                 renderer.screen.blit(letter_image, (pos_x, pos_y))
