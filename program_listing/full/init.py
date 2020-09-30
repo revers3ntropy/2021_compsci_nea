@@ -1,6 +1,6 @@
 import program_listing.full.airport as airport
 import program_listing.full.global_data as global_data
-import program_listing.full.preset_controller as preset_controller
+
 
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
@@ -28,7 +28,7 @@ import program_listing.full.preset_controller as preset_controller
 # ------------------------------------------------------------------------------------------------
 #
 #	init_airports - initialises airport objects
-#	init 	      - initiliases the program
+#	init 	      - initialises the program
 #
 # ================================================================================================
 
@@ -44,9 +44,11 @@ import program_listing.full.preset_controller as preset_controller
 #  CREATED: 25/07/2020
 # ================================================================================================
 def init_airports(airport_data):
-	for line in airport_data:
-		data = tuple(line.split(","))
-		global_data.list_of_airports.append(airport.Airport(data)) # initialses an airport from the data file
+    for line in airport_data:
+        data = tuple(line.split(","))
+        global_data.list_of_airports.append(
+            airport.Airport(data))  # initialises an airport from the data file
+
 
 # ================================================================================================
 #  init -- initialises the program
@@ -60,6 +62,5 @@ def init_airports(airport_data):
 #  CREATED: 25/07/2020
 # ================================================================================================
 def init():
-
-    with open('Airports.txt', 'r') as airport_data: # gets the file
+    with open('Airports.txt', 'r') as airport_data:  # gets the file
         init_airports(airport_data)

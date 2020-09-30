@@ -21,25 +21,29 @@ import program_listing.full.renderer as renderer
 #
 # Imports:
 # 	pygame
-#	renderer
+#   renderer
 #
 # ------------------------------------------------------------------------------------------------
 #
-#	write           - writes the contents of a string on the screen, centered
-#	write_from_left - writes a string on the screen from the left 
+#   write           - writes the contents of a string on the screen, centered
+#   write_from_left - writes a string on the screen from the left
 #
-#================================================================================================
+# ================================================================================================
 
 
-# which characters are capablere of being typed by this system
-typeable_characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-                       't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+# which characters are capable of being typed by this system
+typeable_characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+                       'p', 'q', 'r', 's',
+                       't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8',
+                       '9', '0']
 
-
-# the pygame codes of all typeable characetrs
-typeable_characters_py_game = [py.K_a, py.K_b, py.K_c, py.K_d, py.K_e, py.K_f, py.K_g, py.K_h, py.K_i, py.K_j, py.K_k, py.K_l,
-                               py.K_m, py.K_n, py.K_o, py.K_p, py.K_q, py.K_r, py.K_s, py.K_t, py.K_u, py.K_v, py.K_w, py.K_x,
-                               py.K_y, py.K_z, py.K_1, py.K_2, py.K_3, py.K_4, py.K_5, py.K_6, py.K_7, py.K_8, py.K_9, py.K_0]
+# the pygame codes of all type-able characters
+typeable_characters_py_game = [py.K_a, py.K_b, py.K_c, py.K_d, py.K_e, py.K_f, py.K_g, py.K_h,
+                               py.K_i, py.K_j, py.K_k, py.K_l,
+                               py.K_m, py.K_n, py.K_o, py.K_p, py.K_q, py.K_r, py.K_s, py.K_t,
+                               py.K_u, py.K_v, py.K_w, py.K_x,
+                               py.K_y, py.K_z, py.K_1, py.K_2, py.K_3, py.K_4, py.K_5, py.K_6,
+                               py.K_7, py.K_8, py.K_9, py.K_0]
 
 # codes for each letter
 a = 1
@@ -183,10 +187,11 @@ fonts = {
     }
 }
 
+
 # ================================================================================================
 #  write -- writes a string passed in as images on the screen
 #
-#      Splits and goes throigh a passed in string of characters and blits them onto the pygame 
+#      Splits and goes through a passed in string of characters and blits them onto the pygame
 #		screen object. Writes the middle character at the given x-pos.
 #
 #  INPUT:  font    - int   - the code for the font to be used
@@ -198,20 +203,21 @@ fonts = {
 #  CREATED: 25/07/2020
 # ================================================================================================
 def write(font, message, pos):
-	my_font = fonts[font]
-	message = str.lower(message)
-	if len(message) > 0:
-		for i in range(len(message)):
-			if message[i] != ' ':
-				letter_image = my_font[message[i]]
-				pos_y = pos[1] - my_font[size_y]/2
-				pos_x = (i-(len(message)/2))*(my_font[size_x]+5) + pos[0]
-				renderer.screen.blit(letter_image, (pos_x, pos_y))
+    my_font = fonts[font]
+    message = str.lower(message)
+    if len(message) > 0:
+        for i in range(len(message)):
+            if message[i] != ' ':
+                letter_image = my_font[message[i]]
+                pos_y = pos[1] - my_font[size_y] / 2
+                pos_x = (i - (len(message) / 2)) * (my_font[size_x] + 5) + pos[0]
+                renderer.screen.blit(letter_image, (pos_x, pos_y))
+
 
 # ================================================================================================
 #  write -- writes a string passed in as images on the screen
 #
-#      Splits and goes throigh a passed in string of characters and blits them onto the pygame 
+#      Splits and goes through a passed in string of characters and blits them onto the pygame
 #		screen object. Writes the first character at the given x-pos.
 #
 #  INPUT:  font    - int   - the code for the font to be used
@@ -229,6 +235,6 @@ def write_from_left(font, message, pos):
         for i in range(len(message)):
             if message[i] != ' ':
                 letter_image = my_font[message[i]]
-                pos_y = pos[1] - my_font[size_y]/2
-                pos_x = i*(my_font[size_x]+20) + pos[0]
+                pos_y = pos[1] - my_font[size_y] / 2
+                pos_x = i * (my_font[size_x] + 20) + pos[0]
                 renderer.screen.blit(letter_image, (pos_x, pos_y))

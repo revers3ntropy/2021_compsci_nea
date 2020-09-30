@@ -16,9 +16,42 @@
 
  ================================================================================================
 
-Total time spent on project: 743 mins = 12 hrs 23 mins
+Total time spent on project: 793 mins = 13 hrs 13 mins
 
 									:==-   Log:	 -==:
+
+=================================================================================================
+Date 	   - 00/00/2020
+Start time - 0:00 pm
+End time   - 0:00 pm
+Breaks     - 0 mins
+Time       - 0 mins
+Stage      - programming
+
+Changes:
+ -
+
+=================================================================================================
+Date 	   - 00/00/2020
+Start time - 0:00 pm
+End time   - 0:00 pm
+Breaks     - 0 mins
+Time       - 0 mins
+Stage      - programming
+
+Changes:
+ -
+
+=================================================================================================
+Date 	   - 30/09/2020
+Start time - 0:00 pm
+End time   - 0:00 pm
+Breaks     - 0 mins
+Time       - 0 mins
+Stage      - programming
+
+Changes:
+ -
 
 =================================================================================================
 
@@ -32,7 +65,7 @@ Stage 	   - planning
 Changes:
  - Created this project in Repl.it
  - Created this document, and added information header and log
- - Created time_manegement, to_do and data_structures files, and added header
+ - Created time_management, to_do and data_structures files, and added header
  - Created the Report folder, and added the four report documents with headers
 
 =================================================================================================
@@ -70,8 +103,8 @@ Stage      - planning & coding
 
 Changes:
  - created comment_template file and put the templates in it
- - added a header and very basic funcionality to main.py
- - created globals.py under progam_listing
+ - added a header and very basic functionality to main.py
+ - created globals.py under program_listing
  - started making an MVP
 
 =================================================================================================
@@ -98,7 +131,7 @@ Stage      - programing
 
 Changes:
  - made the files init.py, menu.py, tick.py and added header comments
- - seperated out the main.py file into init.py and tick.py
+ - separated out the main.py file into init.py and tick.py
 
 =================================================================================================
 Date 	   - 06/07/2020
@@ -213,15 +246,6 @@ Changes:
  - Added support for full version on top of MVP
  - added all current program files to folder 'text' in folder 'program_listing' for better 
  	organisation
-=======
-
-Changes:
- - worked on the menu options - 'enter airport details' and general
-=======
-
-Changes:
- - worked on the menu options - 'enter airport details' and general
-=======
 
 Changes:
  - worked on the menu options - 'enter airport details' and general
@@ -259,7 +283,6 @@ Stage      - programming
 Changes:
  - Finished off the flight profit menu option
  - started debugging the MVP
->>>>>>> origin/master
 
 =================================================================================================
 Date 	   - 10/07/2020
@@ -294,7 +317,6 @@ Stage      - programming
 Changes:
  - Finished off the flight profit menu option
  - started debugging the MVP
->>>>>>> origin/master
 
 =================================================================================================
 Date 	   - 10/07/2020
@@ -329,7 +351,6 @@ Stage      - programming
 Changes:
  - Finished off the flight profit menu option
  - started debugging the MVP
->>>>>>> origin/master
 
 =================================================================================================
 Date 	   - 25/07/2020
@@ -356,10 +377,10 @@ Stage      - programming
 Changes:
  - fixed and fully added typing
  - brought over the letter images from previous project
- - added message to be diplsayed on screen initialisation
+ - added message to be displayed on screen initialisation
  - added option for text-based or full versions of program
  - researched way of importing files in repl.it
- - fixed project heirachy of folders, now properly organised
+ - fixed project hierarchy of folders, now properly organised
  - updated the README file
 
 =================================================================================================
@@ -405,10 +426,10 @@ Stage      - programming
 
 Changes:
  - fixed buttons in enter airport details
- - added helpful text to the enter airpot details buttons
- - made a outine around the standard button, rather than using dashed to show selection
+ - added helpful text to the enter airport details buttons
+ - made a outline around the standard button, rather than using dashed to show selection
  - fixed text box checking functions
- - attempted to figure out why on eath the pygame window was not the size it said it was
+ - attempted to figure out why on earth the pygame window was not the size it said it was
  - failed to find why the pygame window is the wrong size
  - added a fudge-factor to renderer.mid_x and mid_y
 
@@ -463,7 +484,7 @@ Stage      - programming
 
 Changes:
  - fixed calc_profit_data
- - fixed curser.get_new_click()
+ - fixed cursor.get_new_click()
 
 =================================================================================================
 Date 	   - 31/07/2020
@@ -502,7 +523,6 @@ Changes:
  - made a class for the program in main.py called Program
  - general tidying up of main.py, airports.py and buttons.py
  - updated README file
-=======
 
 Changes:
  - worked on the menu options - 'enter airport details' and general
@@ -629,9 +649,9 @@ Changes:
 =================================================================================================
 Date 	   - 29/09/2020
 Start time - 9:00 pm
-End time   - 10:00 pm
-Breaks     - 5 mins
-Time       - 55 mins
+End time   - 10:45 pm
+Breaks     - 0 mins
+Time       - 105 mins
 Stage      - programming
 
 Changes:
@@ -643,38 +663,5 @@ Changes:
  - added preset names, for unique names for each preset
  - tested saving and loading presets
  - added preset cap
+ - converted to pycharm project from repl
 
-=================================================================================================
-Date 	   - 00/00/2020
-Start time - 0:00 pm
-End time   - 0:00 pm
-Breaks     - 0 mins
-Time       - 0 mins
-Stage      - programming
-
-Changes:
- - 
-
-=================================================================================================
-Date 	   - 00/00/2020
-Start time - 0:00 pm
-End time   - 0:00 pm
-Breaks     - 0 mins
-Time       - 0 mins
-Stage      - programming
-
-Changes:
- - 
-
-=================================================================================================
-Date 	   - 00/00/2020
-Start time - 0:00 pm
-End time   - 0:00 pm
-Breaks     - 0 mins
-Time       - 0 mins
-Stage      - programming
-
-Changes:
- - 
-
-=================================================================================================

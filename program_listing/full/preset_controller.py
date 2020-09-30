@@ -28,6 +28,7 @@ import pickle
 # ================================================================================================
 presets = {}
 
+
 def save_current_as_preset(name):
     new_preset = Preset()
 
@@ -40,17 +41,16 @@ def save_current_as_preset(name):
     new_preset.standard_price = global_data.standard_price
 
     found_empty = False
-    for i in range(len(presets)):
-        if presets[i] == 0:
+    for j in range(len(presets)):
+        if presets[j] is None:
             found_empty = True
-            presets[i] = new_preset
+            presets[j] = new_preset
             break
-    
+
     with open('presets_data.txt', 'wb') as pickle_file:
         pickle.dump(presets, pickle_file)
 
-
-    if found_empty == False:
+    if not found_empty:
         print('no more preset slots')
 
 
@@ -69,14 +69,14 @@ def load_in_preset(id):
     global_data.first_price = preset.first_price
     global_data.standard_price = preset.standard_price
 
+
 try:
     presets = load_presets()
 except Exception:
     print('Welcome new user!')
     presets = {}
     for i in range(
-            global_data.
-            max_presets):  # sets a empty dict of presets ready to be made
+            global_data.max_presets):  # sets a empty dict of presets ready to be made
         presets[i] = 0
 
 
