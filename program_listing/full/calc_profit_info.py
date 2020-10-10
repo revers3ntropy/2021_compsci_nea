@@ -73,13 +73,9 @@ def run():
         global_data.first_price) + standard_seats * float(global_data.standard_price)
     profit = income - cost
 
-    typing.write(typing.retro_8x10, 'The flight costs ' + str(cost_per_seat) + ' per seat.',
-                 (renderer.mid_x, renderer.mid_y - 100))
-    typing.write(typing.retro_8x10, 'The flight costs ' + str(cost) + ' in total.',
-                 (renderer.mid_x, renderer.mid_y - 50))
-    typing.write(typing.retro_8x10, 'The flight has a total income of ' + str(income) + '.',
-                 (renderer.mid_x, renderer.mid_y))
-    typing.write(typing.retro_8x10, "The flight's profit is " + str(profit) + '.',
-                 (renderer.mid_x, renderer.mid_y + 50))
+    typing.write(typing.retro_8x10, f'The flight costs {cost_per_seat} per seat', (renderer.mid_x, renderer.mid_y - 100))
+    typing.write(typing.retro_8x10, f'The flight costs {cost} in total', (renderer.mid_x, renderer.mid_y - 50))
+    typing.write(typing.retro_8x10, f'The total income of {income}', (renderer.mid_x, renderer.mid_y))
+    typing.write(typing.retro_8x10, f'The profit is {profit}', (renderer.mid_x, renderer.mid_y + 50))
 
-    return global_data.calc_pofit_info
+    return global_data.calc_profit_info

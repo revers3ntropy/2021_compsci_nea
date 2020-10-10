@@ -475,17 +475,28 @@ class TextBoxWithCheck(Buttons):  # very similar to TextButton
 
         if self.check_function(self.message):
             self.correct = True
-            colour_ = (50, 255, 50)
+            outer_colour = (50, 255, 50)
         else:
             self.correct = False
-            colour_ = (255, 50, 50)
+            outer_colour = (255, 50, 50)
 
-        py.draw.rect(renderer.screen, colour_, self.hit_box)
+        if self.selected:
+            if self.moused:
+                inner_colour = (210, 210, 210)
+            else:
+                inner_colour = (200, 200, 200)
+        else:
+            if self.moused:
+                inner_colour = (200, 200, 200)
+            else:
+                inner_colour = (170, 170, 170)
+
+        py.draw.rect(renderer.screen, outer_colour, self.hit_box)
         new_hit_box = (
             self.hit_box[0] + 2, self.hit_box[1] + 2,
             self.hit_box[2] - 4, self.hit_box[3] - 4
         )
-        py.draw.rect(renderer.screen, (200, 200, 200), new_hit_box)
+        py.draw.rect(renderer.screen, inner_colour, new_hit_box)
 
     # ================================================================================================
     #  check_selected -- updates whether or not the text-box has been selected or not

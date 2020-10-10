@@ -22,12 +22,6 @@ import program_listing.full.preset_controller as preset_controller
 #
 # ------------------------------------------------------------------------------------------------
 #
-# global_function_1 - what this function does
-#
-# class 'myFirstClass' functions:
-#	__init__
-#	function_1 - whatever this function does
-#
 # ================================================================================================
 
 back_button = buttons.StandardButton(renderer.mid_x, renderer.mid_y - 100,

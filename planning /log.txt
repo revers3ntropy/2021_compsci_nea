@@ -16,20 +16,9 @@
 
  ================================================================================================
 
-Total time spent on project: 793 mins = 13 hrs 13 mins
+Total time spent on project: 853 mins = 14 hrs 13 mins
 
-									:==-   Log:	 -==:
-
-=================================================================================================
-Date 	   - 00/00/2020
-Start time - 0:00 pm
-End time   - 0:00 pm
-Breaks     - 0 mins
-Time       - 0 mins
-Stage      - programming
-
-Changes:
- -
+									 :=-    Log:	-=:
 
 =================================================================================================
 Date 	   - 00/00/2020
@@ -41,6 +30,22 @@ Stage      - programming
 
 Changes:
  -
+
+=================================================================================================
+Date 	   - 10/10/2020
+Start time - 4:17 pm
+End time   - 5:30 pm
+Breaks     - 13 mins
+Time       - 60 mins
+Stage      - programming
+
+Changes:
+ - updated main.py
+ - bug fixed saving and using pycharm
+ - various minor improvements:
+    - more reactive text boxes
+    - inout check for ticket price
+    - removed starting messages for text boxes
 
 =================================================================================================
 Date 	   - 30/09/2020
@@ -196,9 +201,6 @@ End time   - 11:20 am
 Breaks     - 1 mins
 Time       - 29 mins
 Stage      - programming
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 Changes:
  - worked on the menu options - 'enter airport details' and general

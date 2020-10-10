@@ -11,22 +11,34 @@ import pickle
 #
 #                                       Created : September 28, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 10, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
-#                                       What the file does.
+#                             Controls presets, and the file management.
 #
 # ------------------------------------------------------------------------------------------------
-#
-# global_function_1 - what this function does
-#
-# class 'preset' functions:
-#	__init__
-#	function_1 - whatever this function does
 #
 # ================================================================================================
+
+
+class Preset:
+    def __init__(self):
+        self.name = ''
+        self.uk_airport = ''
+        self.overseas_airport = ''
+        self.airplane_type = 0
+        self.first_seats = 0
+        self.first_price = 0
+        self.standard_price = 0
+
+
 presets = {}
+for i in range(global_data.max_presets):
+    presets[i] = 0
+
+with open('presets_data.txt', 'rb') as pickle_file:
+    presets = pickle.load(pickle_file)
 
 
 def save_current_as_preset(name):
@@ -42,21 +54,19 @@ def save_current_as_preset(name):
 
     found_empty = False
     for j in range(len(presets)):
-        if presets[j] is None:
+        if type(presets[j]) is not Preset:
             found_empty = True
             presets[j] = new_preset
             break
 
-    with open('presets_data.txt', 'wb') as pickle_file:
-        pickle.dump(presets, pickle_file)
-
     if not found_empty:
         print('no more preset slots')
-
-
-def load_presets():
-    with open('presets_data.txt', 'rb') as pickle_file:
-        return pickle.load(pickle_file)
+    else:
+        print('saving')
+        with open('presets_data.txt', 'wb') as pickle_file:
+            print('opened')
+            pickle.dump(presets, pickle_file)
+            print('dumped')
 
 
 def load_in_preset(id_):
@@ -68,24 +78,3 @@ def load_in_preset(id_):
     global_data.first_seats = preset.first_seats
     global_data.first_price = preset.first_price
     global_data.standard_price = preset.standard_price
-
-
-try:
-    presets = load_presets()
-except Exception:
-    print('Welcome new user!')
-    presets = {}
-    for i in range(
-            global_data.max_presets):  # sets a empty dict of presets ready to be made
-        presets[i] = 0
-
-
-class Preset:
-    def __init__(self):
-        self.name = ''
-        self.uk_airport = ''
-        self.overseas_airport = ''
-        self.airplane_type = 0
-        self.first_seats = 0
-        self.first_price = 0
-        self.standard_price = 0

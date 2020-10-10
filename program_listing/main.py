@@ -1,14 +1,3 @@
-import pygame as py
-
-import program_listing.text.global_data as text_globals
-import program_listing.text.init as text_init
-import program_listing.text.tick as text_tick
-
-import program_listing.full.global_data as full_globals
-import program_listing.full.init as full_init
-import program_listing.full.tick as full_tick
-
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -19,7 +8,7 @@ import program_listing.full.tick as full_tick
 #
 #                                       Created : July 02, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 10, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -35,88 +24,85 @@ import program_listing.full.tick as full_tick
 #
 # ------------------------------------------------------------------------------------------------
 #
+#   Imports:
+import pygame as py
+
+import program_listing.text.global_data as text_globals
+import program_listing.text.init as text_init
+import program_listing.text.tick as text_tick
+
+import program_listing.full.global_data as full_globals
+import program_listing.full.init as full_init
+import program_listing.full.tick as full_tick
+
+#
+# -------------------------------------------------------------------------------------------------
+#
 # Class 'Program' functions:
-#	__init__
-#	__init_program - calls the initialise function in the init file
-#	__main_loop    - runs the main loop for the program
-#	run_program    - runs the program from the beginning
+#	main
+#	get_program_type
 # ================================================================================================
 
-class Program:
-    def __init__(self):
-        self.type = False
 
-    # ================================================================================================
-    #  __init_program -- initialises the selected program type
-    #
-    #  INPUT:  none
-    #
-    #  RETURNS:  none
-    # ================================================================================================
-    def __init_program(self):
-        print('initialising program...')
+# ================================================================================================
+#  main -- initialises and then runs the main loop for the selected program
+#
+#  INPUT:  none
+#
+#  RETURNS:  none
+# ================================================================================================
+def main(program_type):
+    print('initialisation finished successfully! \n Running program now...')
 
-        if self.type == 'text':
-            text_init.init()
+    if program_type == 'text':
 
-        elif self.type == 'full':
-            full_init.init()
+        text_init.init()
 
+        while text_globals.go:
+            text_tick.tick()
+
+    elif program_type == 'full':
+
+        full_init.init()
+
+        while full_globals.go:
+            full_tick.tick()
+
+    else:
+        raise Exception(f'Error: program type is {program_type}, which is not valid')
+
+
+# ================================================================================================
+#  get_program_type -- controls selecting the program type, and then the whole Program
+#
+#		Returns the program type the user wants.
+#
+#  INPUT:  none
+#
+#  RETURNS:  program_type - str - which type of program should be run, full or text
+# ================================================================================================
+def get_program_type():
+    print(
+        "Welcome to Joseph Coppin's Computer Science Component 3 non-examined assessment "
+        "project! \n Would you like to run the full program, or just the text-based one? \n")
+
+    program_type = False
+    while not program_type:
+
+        print("Please enter 'full' for the full program, and 'text' for the text-based one. \n")
+        answer = input()
+        if answer not in ('full', 'text'):
+            print("\n Sorry, that is not a valid response. Please enter either 'full' or 'text'. \n")
         else:
-            print(f'Error: program type is {self.type}, which is not valid')
+            program_type = answer
 
-    # ================================================================================================
-    #  __main_loop -- runs the main loop for the selected program
-    #
-    #  INPUT:  none
-    #
-    #  RETURNS:  none
-    # ================================================================================================
-    def __main_loop(self):
-        print('initialisation finished successfully! \n Running program now...')
-
-        if self.type == 'text':
-
-            while text_globals.go:
-                text_tick.tick()
-
-        elif self.type == 'full':
-
-            while full_globals.go:
-                full_tick.tick()
-
-        else:
-            print(f'Error: program type is {self.type}, which is not valid')
-
-    # ================================================================================================
-    #  run_program -- controls selecting the program type, and then the whole Program
-    #
-    #		Waits until a valid response for program type has been inputted, and then initialises and
-    #		runs the main loop of the program. This is called to run the program
-    #
-    #  INPUT:  none
-    #
-    #  RETURNS:  none
-    # ================================================================================================
-    def run_program(self):
-        print(
-            "Welcome to Joseph Coppin's year 10 and 11 computer science non-examined assessment "
-            "project!\nWould you like to run the full program, or just the text-based one?\n")
-
-        while not self.type:
-
-            print("Please enter 'full' for the full program, and 'text' for the text-based one\n")
-            answer = input()
-            if answer not in ('full', 'text'):
-                print("\nSorry, that is not a valid response. "
-                      "Please enter either 'full' or 'text'.\n")
-            else:
-
-                self.type = answer
-
-        self.__init_program()
-        self.__main_loop()
+    return program_type
 
 
-Program().run_program()
+if __name__ == '__main__':
+
+    py.display.set_caption('Joseph Coppin')
+
+    main(get_program_type())
+
 py.quit()

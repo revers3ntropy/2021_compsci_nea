@@ -28,10 +28,20 @@ import program_listing.full.renderer as renderer
 #
 # ================================================================================================
 
-first_price_box = buttons.TextButton(renderer.mid_x, renderer.mid_y, typing.retro_8x10, '0', (0, 255, 255),
-                                     (150, 150, 150), 4, (100, 225, 225))
-standard_price_box = buttons.TextButton(renderer.mid_x, renderer.mid_y + 100, typing.retro_8x10, '0', (0, 255, 255),
-                                        (150, 150, 150), 4, (100, 225, 225))
+
+def price_checker(price):
+    try:
+        price = int(price)
+        if 10000 > price > 0:
+            return True
+    except:
+        pass
+
+    return False
+
+
+first_price_box = buttons.TextBoxWithCheck(renderer.mid_x, renderer.mid_y, typing.retro_8x10, '', 4, price_checker)
+standard_price_box = buttons.TextBoxWithCheck(renderer.mid_x, renderer.mid_y + 100, typing.retro_8x10, '', 4, price_checker)
 
 next_button = buttons.StandardButton(renderer.mid_x, renderer.mid_y + 200, typing.retro_8x10, 'next')
 
@@ -71,7 +81,7 @@ def run():
         return global_data.calc_profit_enter
 
     elif global_data.first_price != 0 and global_data.standard_price != 0:
-        return global_data.calc_pofit_info
+        return global_data.calc_profit_info
 
     else:
         airplane_max = global_data.airplane_types_data[global_data.airplane_type][global_data.max_range]
@@ -91,6 +101,6 @@ def run():
 
         else:
             if run_normal_menu():
-                return global_data.calc_pofit_info
+                return global_data.calc_profit_info
 
     return global_data.calc_profit_data

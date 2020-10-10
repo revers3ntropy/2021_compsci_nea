@@ -40,17 +40,16 @@ mid_y = renderer.mid_y
 
 
 def uk_airport_checker(message):
-    message = message.lower()
-    if message in ('lpl', 'boh'):
+    if message.lower() in ('lpl', 'boh'):
         return True
     return False
 
 
 def overseas_airport_checker(message):
-    message = str.lower(message)
     found = False
+
     for airport in global_data.list_of_airports:
-        if str.lower(airport.code) == message:
+        if str.lower(airport.code) == message.lower():
             found = True
 
     if found:
@@ -58,11 +57,9 @@ def overseas_airport_checker(message):
     return False
 
 
-overseas_airport_box = buttons.TextBoxWithCheck(mid_x, mid_y + 50, typing.retro_8x10, 'DEF', 3,
-                                                overseas_airport_checker)
+overseas_airport_box = buttons.TextBoxWithCheck(mid_x, mid_y + 50, typing.retro_8x10, '', 3, overseas_airport_checker)
 
-uk_airport_box = buttons.TextBoxWithCheck(mid_x, mid_y - 50, typing.retro_8x10, 'ABC', 3,
-                                          uk_airport_checker)
+uk_airport_box = buttons.TextBoxWithCheck(mid_x, mid_y - 50, typing.retro_8x10, '', 3,  uk_airport_checker)
 
 save_button = buttons.StandardButton(mid_x, mid_y + 100, typing.retro_8x10, 'save and exit')
 

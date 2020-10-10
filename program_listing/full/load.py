@@ -14,7 +14,7 @@ import program_listing.full.preset_controller as preset_controller
 #
 #                                       Created : September 28, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 10, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -22,11 +22,6 @@ import program_listing.full.preset_controller as preset_controller
 #
 # ------------------------------------------------------------------------------------------------
 #
-# global_function_1 - what this function does
-#
-# class 'myFirstClass' functions:
-#	__init__
-#	function_1 - whatever this function does
 #
 # ================================================================================================
 play_buttons = {}

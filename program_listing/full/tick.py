@@ -66,7 +66,7 @@ def tick():
 
     state = global_data.session_state
 
-    ###########################
+    # ---------------------------------------------------------------------------------------------
 
     if state == global_data.main_menu:
         global_data.session_state = main_menu.run()
@@ -80,7 +80,7 @@ def tick():
     elif state == global_data.get_info:
         global_data.session_state = get_info.run()
 
-    elif state == global_data.calc_pofit_info:
+    elif state == global_data.calc_profit_info:
         global_data.session_state = calculate_profit_info.run()
 
     elif state == global_data.calc_profit_data:
@@ -98,9 +98,8 @@ def tick():
     else:
         print("Error report: state is " + str(state))
 
-    ##########################
+    # ---------------------------------------------------------------------------------------------
 
-    py.display.set_caption('Joseph Coppin NEA 2020-2021')
     py.display.flip()
     renderer.clock.tick(renderer.run_FPS)
 

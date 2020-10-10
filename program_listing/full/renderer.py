@@ -27,7 +27,7 @@ import program_listing.full.typing as typing
 
 screen_x = 1000
 screen_y = 600
-mid_x = screen_x / 2 - 100  # why repl, why?!
+mid_x = screen_x / 2
 mid_y = screen_y / 2
 
 background_colour = (255, 255, 255)

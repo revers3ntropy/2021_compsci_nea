@@ -49,22 +49,18 @@ mid_y = renderer.mid_y
 def first_seats_checker(message):
     try:
         number = int(message)
-        if number == 0:
-            return True
-        elif number > global_data.airplane_types_data[global_data.airplane_type][global_data.min_first_class]:
-            if number < global_data.airplane_types_data[global_data.airplane_type][global_data.max_capacity] / 2:
-                return True
     except:
-        pass
-        print('error at enter_flight_details.first_seat_checker')
+        number = -1
+
+    if number > global_data.airplane_types_data[global_data.airplane_type][global_data.min_first_class]:
+        if number < global_data.airplane_types_data[global_data.airplane_type][global_data.max_capacity] / 2:
+            return True
     return False
 
 
-first_seats_box = buttons.TextBoxWithCheck(mid_x, mid_y + 50, typing.retro_8x10, '000', 3,
-                                           first_seats_checker)
+first_seats_box = buttons.TextBoxWithCheck(mid_x, mid_y + 50, typing.retro_8x10, '', 3, first_seats_checker)
 
-medium_narrow_button = buttons.StandardButton(mid_x, mid_y - 150, typing.retro_8x10,
-                                              'Medium narrow')
+medium_narrow_button = buttons.StandardButton(mid_x, mid_y - 150, typing.retro_8x10, 'Medium narrow')
 large_narrow_button = buttons.StandardButton(mid_x, mid_y - 100, typing.retro_8x10, 'Large narrow')
 medium_wide_button = buttons.StandardButton(mid_x, mid_y - 50, typing.retro_8x10, 'Medium wide')
 

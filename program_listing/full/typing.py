@@ -51,112 +51,112 @@ a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z = \
 size_x, size_y = 27, 28
 
 # codes for the names of the fonts
-chaos_14x16 = 29
-retro_8x10 = 30
+chaos_14x16, retro_8x10 = 29, 30
 
 # data for the image and size for each font
 fonts = {
     chaos_14x16: {
         size_x: 28,
         size_y: 32,
-        'a': py.image.load('program_listing/full/graphics/chaos_14x16/A.png'),
-        'b': py.image.load('program_listing/full/graphics/chaos_14x16/B.png'),
-        'c': py.image.load('program_listing/full/graphics/chaos_14x16/C.png'),
-        'd': py.image.load('program_listing/full/graphics/chaos_14x16/D.png'),
-        'e': py.image.load('program_listing/full/graphics/chaos_14x16/E.png'),
-        'f': py.image.load('program_listing/full/graphics/chaos_14x16/F.png'),
-        'g': py.image.load('program_listing/full/graphics/chaos_14x16/G.png'),
-        'h': py.image.load('program_listing/full/graphics/chaos_14x16/H.png'),
-        'i': py.image.load('program_listing/full/graphics/chaos_14x16/I.png'),
-        'j': py.image.load('program_listing/full/graphics/chaos_14x16/J.png'),
-        'k': py.image.load('program_listing/full/graphics/chaos_14x16/K.png'),
-        'l': py.image.load('program_listing/full/graphics/chaos_14x16/L.png'),
-        'm': py.image.load('program_listing/full/graphics/chaos_14x16/M.png'),
-        'n': py.image.load('program_listing/full/graphics/chaos_14x16/N.png'),
-        'o': py.image.load('program_listing/full/graphics/chaos_14x16/O.png'),
-        'p': py.image.load('program_listing/full/graphics/chaos_14x16/P.png'),
-        'q': py.image.load('program_listing/full/graphics/chaos_14x16/Q.png'),
-        'r': py.image.load('program_listing/full/graphics/chaos_14x16/R.png'),
-        's': py.image.load('program_listing/full/graphics/chaos_14x16/S.png'),
-        't': py.image.load('program_listing/full/graphics/chaos_14x16/T.png'),
-        'u': py.image.load('program_listing/full/graphics/chaos_14x16/U.png'),
-        'v': py.image.load('program_listing/full/graphics/chaos_14x16/V.png'),
-        'w': py.image.load('program_listing/full/graphics/chaos_14x16/W.png'),
-        'x': py.image.load('program_listing/full/graphics/chaos_14x16/X.png'),
-        'y': py.image.load('program_listing/full/graphics/chaos_14x16/Y.png'),
-        'z': py.image.load('program_listing/full/graphics/chaos_14x16/Z.png'),
-        '-': py.image.load('program_listing/full/graphics/chaos_14x16/-.png'),
-        '/': py.image.load('program_listing/full/graphics/chaos_14x16/forward_slash.png'),
-        '!': py.image.load('program_listing/full/graphics/chaos_14x16/!.png'),
-        '?': py.image.load('program_listing/full/graphics/chaos_14x16/?.png'),
-        '@': py.image.load('program_listing/full/graphics/chaos_14x16/@.png'),
-        '#': py.image.load('program_listing/full/graphics/chaos_14x16/#.png'),
-        '^': py.image.load('program_listing/full/graphics/chaos_14x16/^.png'),
-        '=': py.image.load('program_listing/full/graphics/chaos_14x16/=.png'),
-        '+': py.image.load('program_listing/full/graphics/chaos_14x16/+.png'),
-        '_': py.image.load('program_listing/full/graphics/chaos_14x16/_.png'),
-        ':': py.image.load('program_listing/full/graphics/chaos_14x16/;.png'),  # wrong file, I know
-        '0': py.image.load('program_listing/full/graphics/chaos_14x16/0.png'),
-        '1': py.image.load('program_listing/full/graphics/chaos_14x16/1.png'),
-        '2': py.image.load('program_listing/full/graphics/chaos_14x16/2.png'),
-        '3': py.image.load('program_listing/full/graphics/chaos_14x16/3.png'),
-        '4': py.image.load('program_listing/full/graphics/chaos_14x16/4.png'),
-        '5': py.image.load('program_listing/full/graphics/chaos_14x16/5.png'),
-        '6': py.image.load('program_listing/full/graphics/chaos_14x16/6.png'),
-        '7': py.image.load('program_listing/full/graphics/chaos_14x16/7.png'),
-        '8': py.image.load('program_listing/full/graphics/chaos_14x16/8.png'),
-        '9': py.image.load('program_listing/full/graphics/chaos_14x16/9.png'),
+        'a': py.image.load('full/graphics/chaos_14x16/A.png'),
+        'b': py.image.load('full/graphics/chaos_14x16/B.png'),
+        'c': py.image.load('full/graphics/chaos_14x16/C.png'),
+        'd': py.image.load('full/graphics/chaos_14x16/D.png'),
+        'e': py.image.load('full/graphics/chaos_14x16/E.png'),
+        'f': py.image.load('full/graphics/chaos_14x16/F.png'),
+        'g': py.image.load('full/graphics/chaos_14x16/G.png'),
+        'h': py.image.load('full/graphics/chaos_14x16/H.png'),
+        'i': py.image.load('full/graphics/chaos_14x16/I.png'),
+        'j': py.image.load('full/graphics/chaos_14x16/J.png'),
+        'k': py.image.load('full/graphics/chaos_14x16/K.png'),
+        'l': py.image.load('full/graphics/chaos_14x16/L.png'),
+        'm': py.image.load('full/graphics/chaos_14x16/M.png'),
+        'n': py.image.load('full/graphics/chaos_14x16/N.png'),
+        'o': py.image.load('full/graphics/chaos_14x16/O.png'),
+        'p': py.image.load('full/graphics/chaos_14x16/P.png'),
+        'q': py.image.load('full/graphics/chaos_14x16/Q.png'),
+        'r': py.image.load('full/graphics/chaos_14x16/R.png'),
+        's': py.image.load('full/graphics/chaos_14x16/S.png'),
+        't': py.image.load('full/graphics/chaos_14x16/T.png'),
+        'u': py.image.load('full/graphics/chaos_14x16/U.png'),
+        'v': py.image.load('full/graphics/chaos_14x16/V.png'),
+        'w': py.image.load('full/graphics/chaos_14x16/W.png'),
+        'x': py.image.load('full/graphics/chaos_14x16/X.png'),
+        'y': py.image.load('full/graphics/chaos_14x16/Y.png'),
+        'z': py.image.load('full/graphics/chaos_14x16/Z.png'),
+        '-': py.image.load('full/graphics/chaos_14x16/-.png'),
+        '/': py.image.load('full/graphics/chaos_14x16/forward_slash.png'),
+        '!': py.image.load('full/graphics/chaos_14x16/!.png'),
+        '?': py.image.load('full/graphics/chaos_14x16/?.png'),
+        '@': py.image.load('full/graphics/chaos_14x16/@.png'),
+        '#': py.image.load('full/graphics/chaos_14x16/#.png'),
+        '^': py.image.load('full/graphics/chaos_14x16/^.png'),
+        '=': py.image.load('full/graphics/chaos_14x16/=.png'),
+        '+': py.image.load('full/graphics/chaos_14x16/+.png'),
+        '_': py.image.load('full/graphics/chaos_14x16/_.png'),
+        ':': py.image.load('full/graphics/chaos_14x16/;.png'),  # wrong file, I know
+        '0': py.image.load('full/graphics/chaos_14x16/0.png'),
+        '1': py.image.load('full/graphics/chaos_14x16/1.png'),
+        '2': py.image.load('full/graphics/chaos_14x16/2.png'),
+        '3': py.image.load('full/graphics/chaos_14x16/3.png'),
+        '4': py.image.load('full/graphics/chaos_14x16/4.png'),
+        '5': py.image.load('full/graphics/chaos_14x16/5.png'),
+        '6': py.image.load('full/graphics/chaos_14x16/6.png'),
+        '7': py.image.load('full/graphics/chaos_14x16/7.png'),
+        '8': py.image.load('full/graphics/chaos_14x16/8.png'),
+        '9': py.image.load('full/graphics/chaos_14x16/9.png'),
     },
     retro_8x10: {
         size_x: 16,
         size_y: 20,
-        'a': py.image.load('program_listing/full/graphics/retro_8x10/A.png'),
-        'b': py.image.load('program_listing/full/graphics/retro_8x10/B.png'),
-        'c': py.image.load('program_listing/full/graphics/retro_8x10/C.png'),
-        'd': py.image.load('program_listing/full/graphics/retro_8x10/D.png'),
-        'e': py.image.load('program_listing/full/graphics/retro_8x10/E.png'),
-        'f': py.image.load('program_listing/full/graphics/retro_8x10/F.png'),
-        'g': py.image.load('program_listing/full/graphics/retro_8x10/G.png'),
-        'h': py.image.load('program_listing/full/graphics/retro_8x10/H.png'),
-        'i': py.image.load('program_listing/full/graphics/retro_8x10/I.png'),
-        'j': py.image.load('program_listing/full/graphics/retro_8x10/J.png'),
-        'k': py.image.load('program_listing/full/graphics/retro_8x10/K.png'),
-        'l': py.image.load('program_listing/full/graphics/retro_8x10/L.png'),
-        'm': py.image.load('program_listing/full/graphics/retro_8x10/M.png'),
-        'n': py.image.load('program_listing/full/graphics/retro_8x10/N.png'),
-        'o': py.image.load('program_listing/full/graphics/retro_8x10/O.png'),
-        'p': py.image.load('program_listing/full/graphics/retro_8x10/P.png'),
-        'q': py.image.load('program_listing/full/graphics/retro_8x10/Q.png'),
-        'r': py.image.load('program_listing/full/graphics/retro_8x10/R.png'),
-        's': py.image.load('program_listing/full/graphics/retro_8x10/S.png'),
-        't': py.image.load('program_listing/full/graphics/retro_8x10/T.png'),
-        'u': py.image.load('program_listing/full/graphics/retro_8x10/U.png'),
-        'v': py.image.load('program_listing/full/graphics/retro_8x10/V.png'),
-        'w': py.image.load('program_listing/full/graphics/retro_8x10/W.png'),
-        'x': py.image.load('program_listing/full/graphics/retro_8x10/X.png'),
-        'y': py.image.load('program_listing/full/graphics/retro_8x10/Y.png'),
-        'z': py.image.load('program_listing/full/graphics/retro_8x10/Z.png'),
-        '-': py.image.load('program_listing/full/graphics/retro_8x10/-.png'),
-        '/': py.image.load('program_listing/full/graphics/retro_8x10/slash.png'),
-        '!': py.image.load('program_listing/full/graphics/retro_8x10/!.png'),
-        '?': py.image.load('program_listing/full/graphics/retro_8x10/?.png'),
-        '@': py.image.load('program_listing/full/graphics/retro_8x10/@.png'),
-        '#': py.image.load('program_listing/full/graphics/retro_8x10/#.png'),
-        '^': py.image.load('program_listing/full/graphics/retro_8x10/^.png'),
-        '=': py.image.load('program_listing/full/graphics/retro_8x10/=.png'),
-        '+': py.image.load('program_listing/full/graphics/retro_8x10/+.png'),
-        '_': py.image.load('program_listing/full/graphics/retro_8x10/_.png'),
-        ':': py.image.load('program_listing/full/graphics/retro_8x10/;.png'),  # wrong file, I know
-        '0': py.image.load('program_listing/full/graphics/retro_8x10/0.png'),
-        '1': py.image.load('program_listing/full/graphics/retro_8x10/1.png'),
-        '2': py.image.load('program_listing/full/graphics/retro_8x10/2.png'),
-        '3': py.image.load('program_listing/full/graphics/retro_8x10/3.png'),
-        '4': py.image.load('program_listing/full/graphics/retro_8x10/4.png'),
-        '5': py.image.load('program_listing/full/graphics/retro_8x10/5.png'),
-        '6': py.image.load('program_listing/full/graphics/retro_8x10/6.png'),
-        '7': py.image.load('program_listing/full/graphics/retro_8x10/7.png'),
-        '8': py.image.load('program_listing/full/graphics/retro_8x10/8.png'),
-        '9': py.image.load('program_listing/full/graphics/retro_8x10/9.png'),
+        'a': py.image.load('full/graphics/retro_8x10/A.png'),
+        'b': py.image.load('full/graphics/retro_8x10/B.png'),
+        'c': py.image.load('full/graphics/retro_8x10/C.png'),
+        'd': py.image.load('full/graphics/retro_8x10/D.png'),
+        'e': py.image.load('full/graphics/retro_8x10/E.png'),
+        'f': py.image.load('full/graphics/retro_8x10/F.png'),
+        'g': py.image.load('full/graphics/retro_8x10/G.png'),
+        'h': py.image.load('full/graphics/retro_8x10/H.png'),
+        'i': py.image.load('full/graphics/retro_8x10/I.png'),
+        'j': py.image.load('full/graphics/retro_8x10/J.png'),
+        'k': py.image.load('full/graphics/retro_8x10/K.png'),
+        'l': py.image.load('full/graphics/retro_8x10/L.png'),
+        'm': py.image.load('full/graphics/retro_8x10/M.png'),
+        'n': py.image.load('full/graphics/retro_8x10/N.png'),
+        'o': py.image.load('full/graphics/retro_8x10/O.png'),
+        'p': py.image.load('full/graphics/retro_8x10/P.png'),
+        'q': py.image.load('full/graphics/retro_8x10/Q.png'),
+        'r': py.image.load('full/graphics/retro_8x10/R.png'),
+        's': py.image.load('full/graphics/retro_8x10/S.png'),
+        't': py.image.load('full/graphics/retro_8x10/T.png'),
+        'u': py.image.load('full/graphics/retro_8x10/U.png'),
+        'v': py.image.load('full/graphics/retro_8x10/V.png'),
+        'w': py.image.load('full/graphics/retro_8x10/W.png'),
+        'x': py.image.load('full/graphics/retro_8x10/X.png'),
+        'y': py.image.load('full/graphics/retro_8x10/Y.png'),
+        'z': py.image.load('full/graphics/retro_8x10/Z.png'),
+        '-': py.image.load('full/graphics/retro_8x10/-.png'),
+        '/': py.image.load('full/graphics/retro_8x10/slash.png'),
+        '!': py.image.load('full/graphics/retro_8x10/!.png'),
+        '?': py.image.load('full/graphics/retro_8x10/?.png'),
+        '@': py.image.load('full/graphics/retro_8x10/@.png'),
+        '#': py.image.load('full/graphics/retro_8x10/#.png'),
+        '^': py.image.load('full/graphics/retro_8x10/^.png'),
+        '=': py.image.load('full/graphics/retro_8x10/=.png'),
+        '+': py.image.load('full/graphics/retro_8x10/+.png'),
+        '_': py.image.load('full/graphics/retro_8x10/_.png'),
+        ':': py.image.load('full/graphics/retro_8x10/;.png'),  # wrong file, I know
+        '.': py.image.load('full/graphics/retro_8x10/dot.png'),
+        '0': py.image.load('full/graphics/retro_8x10/0.png'),
+        '1': py.image.load('full/graphics/retro_8x10/1.png'),
+        '2': py.image.load('full/graphics/retro_8x10/2.png'),
+        '3': py.image.load('full/graphics/retro_8x10/3.png'),
+        '4': py.image.load('full/graphics/retro_8x10/4.png'),
+        '5': py.image.load('full/graphics/retro_8x10/5.png'),
+        '6': py.image.load('full/graphics/retro_8x10/6.png'),
+        '7': py.image.load('full/graphics/retro_8x10/7.png'),
+        '8': py.image.load('full/graphics/retro_8x10/8.png'),
+        '9': py.image.load('full/graphics/retro_8x10/9.png'),
     }
 }
 
@@ -179,11 +179,12 @@ def write(font, message, pos):
     my_font = fonts[font]
     message = str.lower(message)
     if len(message) > 0:
-        for i_ in range(len(message)):
-            if message[i_] != ' ':
-                letter_image = my_font[message[i_]]
+        for i in range(len(message)):
+            if message[i] != ' ':
+                letter_image = my_font[message[i]]
                 pos_y = pos[1] - my_font[size_y] / 2
-                pos_x = (i_ - (len(message) / 2)) * (my_font[size_x] + 5) + pos[0]
+                pos_x = (i - (len(message) / 2)) * (my_font[size_x] + 5) + pos[0]
+
                 renderer.screen.blit(letter_image, (pos_x, pos_y))
 
 
@@ -205,9 +206,10 @@ def write_from_left(font, message, pos):
     my_font = fonts[font]
     message = str.lower(message)
     if len(message) > 0:
-        for _i in range(len(message)):
-            if message[_i] != ' ':
-                letter_image = my_font[message[_i]]
+        for i in range(len(message)):
+            if message[i] != ' ':
+                letter_image = my_font[message[i]]
                 pos_y = pos[1] - my_font[size_y] / 2
-                pos_x = _i * (my_font[size_x] + 20) + pos[0]
+                pos_x = i * (my_font[size_x] + 20) + pos[0]
+
                 renderer.screen.blit(letter_image, (pos_x, pos_y))
