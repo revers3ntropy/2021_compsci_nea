@@ -1,5 +1,3 @@
-import program_listing.text.global_data as global_data
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -19,7 +17,7 @@ import program_listing.text.global_data as global_data
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-#	global_data
+import program_listing.text.global_data as global_data
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -152,6 +150,7 @@ def enter_flight_details():
 		else:
 			print('Not a a valid type of aircraft, sorry')
 
+
 # ================================================================================================
 #  calculate_profit -- controls the 'calculate profit' menu option
 #
@@ -172,13 +171,13 @@ def calculate_cost():
 		print('Sorry, please enter the number of first class seats first')
 	else:
 		airplane_max = global_data.airplane_types_data[global_data.airplane_type][global_data.max_range]
-		airport_dist = 0
+
 		if global_data.uk_airport == 'LJL':
 			airport_dist = global_data.overseas_airport.get_dist_LJL()
 		else:
 			airport_dist = global_data.overseas_airport.get_dist_BI()
 
-		if airplane_max < int(airport_dist):
+		if airplane_max < float(airport_dist):
 			print('Sorry, but the range of the selected airport is too short for the flight plan')
 
 		else:
@@ -209,7 +208,7 @@ def calculate_cost():
 					found = True
 			
 			standard_seats = global_data.airplane_types_data[global_data.airplane_type][global_data.max_capasity] - global_data.first_seats * 2
-			cost_per_seat = global_data.airplane_types_data[global_data.airplane_type][global_data.running_cost] * airport_dist / 100
+			cost_per_seat = float(global_data.airplane_types_data[global_data.airplane_type][global_data.running_cost]) * float(airport_dist) / 100
 			cost = cost_per_seat * (global_data.first_seats + standard_seats)
 			income = global_data.first_seats * global_data.first_price + standard_seats * global_data.standard_price
 			profit = income - cost
@@ -218,4 +217,3 @@ def calculate_cost():
 			print('The flight costs ' + str(cost) + ' in total.')
 			print('The flight has a total income of ' + str(income) + '.')
 			print("The flight's profit is " + str(profit) + '.')
-		

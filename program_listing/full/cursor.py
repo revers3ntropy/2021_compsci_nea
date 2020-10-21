@@ -1,7 +1,3 @@
-import pygame as py
-import program_listing.full.global_data as global_data
-
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -12,7 +8,7 @@ import program_listing.full.global_data as global_data
 #
 #                                       Created : July 27, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 21, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -21,16 +17,17 @@ import program_listing.full.global_data as global_data
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-#	pygame
-#	global_data
+import pygame as py
+import program_listing.full.global_data as global_data
 #
 # ------------------------------------------------------------------------------------------------
 #
-#	update_mouse_clicked  - updates the mouse clicks history
-#	check_mouse_collision - checks if the cursor is colliding with a hitbox passed in
-#	check_new_click		  - checks for new mouse click
+#	update_mouse_clicked
+#	check_mouse_collision
+#	check_new_click
 #
 # ================================================================================================
+
 
 # ================================================================================================
 #  update_mouse_clicked -- updates the mouse clicks history

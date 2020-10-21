@@ -8,7 +8,7 @@
 #
 #                                       Created : July 02, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 21, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -17,11 +17,9 @@
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-#	none
+
 #
 # ------------------------------------------------------------------------------------------------
-#
-#	none
 #
 # ================================================================================================
 
@@ -41,7 +39,7 @@ session_tick = 0
 mouse_pressed = None
 mouse_history = None
 
-# finite state machine states
+# finite state machine states. The states are accessed by the 'tick' functions in each menu option.
 main_menu = 0
 enter_airport_details = 1
 enter_flight_details = 2

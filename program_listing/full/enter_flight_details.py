@@ -1,19 +1,14 @@
-import program_listing.full.global_data as global_data
-import program_listing.full.renderer as renderer
-import program_listing.full.buttons as buttons
-import program_listing.full.typing as typing
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
 #
 #                                  Project Name : Computer Science GSCE Coursework
 #
-#                                     File Name : file_name.py
+#                                     File Name : enter_flight_details.py
 #
 #                                       Created : September 28, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 21, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -22,19 +17,20 @@ import program_listing.full.typing as typing
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-# 	global_data
-#	renderer
-#	buttons
-#	typing
+import program_listing.full.global_data as global_data
+import program_listing.full.renderer as renderer
+import program_listing.full.buttons as buttons
+import program_listing.full.typing as typing
 #
 # ------------------------------------------------------------------------------------------------
 #
-#	run - runs this menu option
+#	run
 #
 # ================================================================================================
 
+
 # ================================================================================================
-#  run -- runs and controls the menu option
+#  first_seat_checker -- checks if the number of first class seats entered is valid or not
 #
 #  INPUT:  none
 #
@@ -42,21 +38,24 @@ import program_listing.full.typing as typing
 #
 #  CREATED: 28/07/2020
 # ================================================================================================
-mid_x = renderer.mid_x
-mid_y = renderer.mid_y
-
-
 def first_seats_checker(message):
     try:
         number = int(message)
     except:
         number = -1
 
-    if number > global_data.airplane_types_data[global_data.airplane_type][global_data.min_first_class]:
-        if number < global_data.airplane_types_data[global_data.airplane_type][global_data.max_capacity] / 2:
-            return True
+    if global_data.airplane_type > 0:
+        airplane_data = global_data.airplane_types_data[global_data.airplane_type]
+
+        if number > airplane_data[global_data.min_first_class]:
+            if number < airplane_data[global_data.max_capacity] / 2:
+                return True
+
     return False
 
+
+mid_x = renderer.mid_x
+mid_y = renderer.mid_y
 
 first_seats_box = buttons.TextBoxWithCheck(mid_x, mid_y + 50, typing.retro_8x10, '', 3, first_seats_checker)
 

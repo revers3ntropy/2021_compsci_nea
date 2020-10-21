@@ -1,6 +1,3 @@
-import program_listing.text.airport as airport
-import program_listing.text.global_data as global_data
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -20,13 +17,13 @@ import program_listing.text.global_data as global_data
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-#	airports
-#	global_data
+import program_listing.text.airport as airport
+import program_listing.text.global_data as global_data
 #
 # ------------------------------------------------------------------------------------------------
 #
-#	init_airports - initialises airport objects
-#	init 	      - initiliases the program
+#	init_airports
+#	init
 #
 # ================================================================================================
 

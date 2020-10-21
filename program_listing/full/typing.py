@@ -1,6 +1,3 @@
-import pygame as py
-import program_listing.full.renderer as renderer
-
 # ==================================================================================================
 # |                                         Joseph Coppin                                          |
 # ==================================================================================================
@@ -20,13 +17,13 @@ import program_listing.full.renderer as renderer
 # --------------------------------------------------------------------------------------------------
 #
 # Imports:
-# 	pygame
-#   renderer
+import pygame as py
+import program_listing.full.renderer as renderer
 #
 # --------------------------------------------------------------------------------------------------
 #
-#   write           - writes the contents of a string on the screen, centered
-#   write_from_left - writes a string on the screen from the left
+#   write
+#   write_from_left
 #
 # ==================================================================================================
 

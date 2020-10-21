@@ -1,6 +1,3 @@
-import program_listing.text.global_data as global_data
-import program_listing.text.menu as menu
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -20,8 +17,8 @@ import program_listing.text.menu as menu
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-#  global_data
-#  menu
+import program_listing.text.global_data as global_data
+import program_listing.text.menu as menu
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -40,8 +37,7 @@ import program_listing.text.menu as menu
 #  CREATED: 06/07/2020
 # ================================================================================================
 def tick():
-	print()
-	print('What would you like to do?')
+	print('\n What would you like to do?')
 	print("You can 'calculate flight profit', 'enter airport details', 'enter flight details', 'clear data' or 'quit' ")
 	option = input()
 	if option == 'quit':

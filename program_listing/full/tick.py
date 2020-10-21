@@ -1,5 +1,24 @@
+# ================================================================================================
+# |                                       Joseph Coppin                                         |
+# ================================================================================================
+#
+#                                  Project Name : Computer Science GSCE Coursework
+#
+#                                     File Name : tick.py
+#
+#                                       Created : July 25, 2020
+#
+#                                   Last Update : October 21, 2020
+#
+# ------------------------------------------------------------------------------------------------
+#
+#             This file contains the function tick, which is run every tick of the program.
+#
+# ------------------------------------------------------------------------------------------------
+#
+#   Imports:
 import program_listing.full.renderer as renderer
-import program_listing.full.global_data as global_data
+import program_listing.full.global_data as g
 import program_listing.full.cursor as cursor
 import program_listing.full.calc_profit_info as calculate_profit_info
 import program_listing.full.calc_profit_enter as calculate_profit_enter
@@ -11,44 +30,31 @@ import program_listing.full.main_menu as main_menu
 import program_listing.full.save as save
 import program_listing.full.load as load
 import pygame as py
-
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : tick.py
-#
-#                                       Created : July 25, 2020
-#
-#                                   Last Update : September 30, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
-#             This file contains the function tick, which is run every tick of the program.
-#
-# ------------------------------------------------------------------------------------------------
-#
-# Imports:
-#	renderer
-#	global_data
-#	calculate_profit
-#	enter_airport_details
-#	enter_flight_details
-#	get_info
-#	main_menu
-#	pygame
-#
-# ------------------------------------------------------------------------------------------------
-#
-#	tick - gets run once every tick
+#	tick
 #
 # ================================================================================================
 
+# The state machine holds two things: the ID for that state, and the file which contains the run
+# function for the state.
+state_machine = {
+    g.main_menu: main_menu,
+    g.enter_airport_details: airport_details,
+    g.enter_flight_details: flight_details,
+    g.get_info: get_info,
+    g.calc_profit_info: calculate_profit_info,
+    g.calc_profit_data: calculate_profit_data,
+    g.calc_profit_enter: calculate_profit_enter,
+    g.save: save,
+    g.load: load
+}
+
 
 # ================================================================================================
-#  tick -- run this every loop to step forwards one tick graphically and logically
+#  tick -- run this every loop to step forwards one tick graphically and logically. Updates pygame
+#          by refreshing the screen, and then filling it with the background colour.
 #
 #  INPUT:  none
 #
@@ -57,53 +63,20 @@ import pygame as py
 #  CREATED: 25/07/2020
 # ================================================================================================
 def tick():
+    g.session_tick += 1
 
-    global_data.session_tick += 1
-
+    # updates the mouse click history, which means that you have to click on the button for it to
+    # register as a click, rather than, for example, holding down on the mouse.
     cursor.update_mouse_clicked()
 
-    # renderer.cursor()
+    # runs the current state function, which will sort out the graphics and logical side for each menu option
+    g.session_state = state_machine[g.session_state].run()
 
-    state = global_data.session_state
-
-    # ---------------------------------------------------------------------------------------------
-
-    if state == global_data.main_menu:
-        global_data.session_state = main_menu.run()
-
-    elif state == global_data.enter_airport_details:
-        global_data.session_state = airport_details.run()
-
-    elif state == global_data.enter_flight_details:
-        global_data.session_state = flight_details.run()
-
-    elif state == global_data.get_info:
-        global_data.session_state = get_info.run()
-
-    elif state == global_data.calc_profit_info:
-        global_data.session_state = calculate_profit_info.run()
-
-    elif state == global_data.calc_profit_data:
-        global_data.session_state = calculate_profit_data.run()
-
-    elif state == global_data.calc_profit_enter:
-        global_data.session_state = calculate_profit_enter.run()
-
-    elif state == global_data.save:
-        global_data.session_state = save.run()
-
-    elif state == global_data.load:
-        global_data.session_state = load.run()
-        
-    else:
-        print("Error report: state is " + str(state))
-
-    # ---------------------------------------------------------------------------------------------
-
+    # pygame tick
     py.display.flip()
     renderer.clock.tick(renderer.run_FPS)
-
     renderer.screen.fill(renderer.background_colour)
 
-    if global_data.typing_sticky_keys > 0:
-        global_data.typing_sticky_keys -= 1
+    # updates the global sticky keys mod for typing smoothly
+    if g.typing_sticky_keys > 0:
+        g.typing_sticky_keys -= 1

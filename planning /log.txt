@@ -16,20 +16,69 @@
 
  ================================================================================================
 
-Total time spent on project: 853 mins = 14 hrs 13 mins
+Total time spent on project: 987 mins = 16 hrs 27 mins
 
 									 :=-    Log:	-=:
 
 =================================================================================================
-Date 	   - 00/00/2020
+Date 	   - 0/00/2020
 Start time - 0:00 pm
 End time   - 0:00 pm
 Breaks     - 0 mins
-Time       - 0 mins
+Time       - 00 mins
 Stage      - programming
 
 Changes:
- -
+-
+=================================================================================================
+Date 	   - 0/00/2020
+Start time - 0:00 pm
+End time   - 0:00 pm
+Breaks     - 0 mins
+Time       - 00 mins
+Stage      - programming
+
+Changes:
+-
+
+=================================================================================================
+Date 	   - 21/10/2020
+Start time - 8:05 pm
+End time   - 9:05 pm
+Breaks     - 0 mins
+Time       - 60 mins
+Stage      - programming
+
+Changes:
+ - general tidying up
+ - comment updating
+ - sorted out state machine
+
+=================================================================================================
+Date 	   - 21/10/2020
+Start time - 6:05 pm
+End time   - 6:20 pm
+Breaks     - 0 mins
+Time       - 15 mins
+Stage      - programming
+
+Changes:
+ - general tidying up
+ - better unit tests
+ - wrote some unit tests
+
+=================================================================================================
+Date 	   - 15/10/2020
+Start time - 8:28 pm
+End time   - 9:30 pm
+Breaks     - 4 mins
+Time       - 58 mins
+Stage      - programming
+
+Changes:
+ - added in unit testing
+ - added in first unit tests
+ - tidied up commenting a bit
 
 =================================================================================================
 Date 	   - 10/10/2020

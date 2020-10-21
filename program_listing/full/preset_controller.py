@@ -35,13 +35,22 @@ class Preset:
 
 presets = {}
 for i in range(global_data.max_presets):
-    presets[i] = 0
+    presets[i] = None
 
 with open('presets_data.txt', 'rb') as pickle_file:
     presets = pickle.load(pickle_file)
 
 
-def save_current_as_preset(name):
+# ================================================================================================
+#  save_current_as_preset -- gets the current entered data, and saves it to a new preset.
+#
+#  INPUT:  name: str - the name of the new preset
+#
+#  RETURNS:  none
+#
+#  CREATED: 28/07/2020
+# ================================================================================================
+def save_current_as_preset(name: str):
     new_preset = Preset()
 
     new_preset.name = name
@@ -59,6 +68,7 @@ def save_current_as_preset(name):
             presets[j] = new_preset
             break
 
+    # check if there is an empty slot for the preset
     if not found_empty:
         print('no more preset slots')
     else:
@@ -69,7 +79,16 @@ def save_current_as_preset(name):
             print('dumped')
 
 
-def load_in_preset(id_):
+# ================================================================================================
+#   load_in_preset -- loads a preset from the id of the preset.
+#
+#   INPUT:  id_: int - the id of the preset to be loaded in
+#
+#   RETURNS:  none
+#
+#   CREATED: 28/07/2020
+# ================================================================================================
+def load_in_preset(id_: int):
     preset = presets[id_]
 
     global_data.uk_airport = preset.uk_airport

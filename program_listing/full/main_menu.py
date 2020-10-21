@@ -1,9 +1,3 @@
-import program_listing.full.buttons as buttons
-import program_listing.full.global_data as global_data
-import program_listing.full.typing as typing
-import program_listing.full.clear_data as clear_data
-import program_listing.full.renderer as renderer
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -14,7 +8,7 @@ import program_listing.full.renderer as renderer
 #
 #                                       Created : July 28, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 21, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -22,17 +16,17 @@ import program_listing.full.renderer as renderer
 #
 # ------------------------------------------------------------------------------------------------
 #
-# Imports:
-#	buttons
-#	global_data
-#	typing
-#	clear_data
-#	renderer
+#   Imports:
+import program_listing.full.buttons as buttons
+import program_listing.full.global_data as global_data
+import program_listing.full.typing as typing
+import program_listing.full.clear_data as clear_data
+import program_listing.full.renderer as renderer
 #
 # ------------------------------------------------------------------------------------------------
 #
-#	run - runs the main menu
-#	tick_stats - displays the current stats entered by the user onto the screen
+#	run
+#	tick_stats
 #
 # ================================================================================================
 center_x = renderer.mid_x
@@ -52,10 +46,9 @@ enter_flight_details = buttons.StandardButton(center_x, center_y + 200, typing.r
 
 
 # ================================================================================================
-#  tick_stats -- displays the current stats entered by the user onto the screen_x
-#
-#		Goes through each global stat and check if something has been entered or not, and 
-#		displays a message accordingly.
+#  tick_stats -- displays the current stats entered by the user onto the screen_x. Goes through
+#                each global stat and check if something has been entered or not, and displays a
+#                message accordingly.
 #
 #  INPUT:  none
 #

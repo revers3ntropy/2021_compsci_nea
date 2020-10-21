@@ -1,7 +1,3 @@
-import program_listing.full.airport as airport
-import program_listing.full.global_data as global_data
-
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -12,7 +8,7 @@ import program_listing.full.global_data as global_data
 #
 #                                       Created : July 25, 2020
 #
-#                                   Last Update : September 30, 2020
+#                                   Last Update : October 21, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -20,24 +16,23 @@ import program_listing.full.global_data as global_data
 #
 # ------------------------------------------------------------------------------------------------
 #
-# Imports:
-#	airports
-#	global_data
-#	renderer	- below
+#   Imports:
+import program_listing.full.airport as airport
+import program_listing.full.global_data as g
 #
 # ------------------------------------------------------------------------------------------------
 #
-#	init_airports - initialises airport objects
-#	init 	      - initialises the program
+#	init_airports
+#	init
 #
 # ================================================================================================
 
+
 # ================================================================================================
-#  init_airports -- initialises all airport objects
+#  init_airports -- initialises all airport objects. Called once when the program gets run, adds to
+#                   the global list of Airport objects.
 #
-#      Called once when the program gets run, adds to the global list of Airport objects.
-#
-#  INPUT:  none
+#  INPUT:  airport_data - the data to be loaded in
 #
 #  RETURNS:  none
 #
@@ -46,14 +41,13 @@ import program_listing.full.global_data as global_data
 def init_airports(airport_data):
     for line in airport_data:
         data = tuple(line.split(","))
-        global_data.list_of_airports.append(
+        g.list_of_airports.append(
             airport.Airport(data))  # initialises an airport from the data file
 
 
 # ================================================================================================
-#  init -- initialises the program
-#
-#      Called once when the program gets run, sets up the program for running.async
+#  init -- initialises the program. Called once when the program gets run, sets up the program for
+#  running.
 #
 #  INPUT:  none
 #

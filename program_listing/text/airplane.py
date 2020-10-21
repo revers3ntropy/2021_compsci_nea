@@ -1,5 +1,3 @@
-import program_listing.text.global_data as global_data
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -19,20 +17,16 @@ import program_listing.text.global_data as global_data
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-#  global_data
+import program_listing.text.global_data as global_data
+
+
 #
 # ------------------------------------------------------------------------------------------------
-#
-# global_function_1 - what this function does
-#
-# class 'myFirstClass' functions:
-#	__init__
-#	function_1 - whatever this function does
 #
 # ================================================================================================
 
 class Airplane:
-	# ================================================================================================
+    # ================================================================================================
     #  __init__ -- initialises the object Airport
     #
     #  INPUT: airplane_type - which type of airplane it is
@@ -41,10 +35,10 @@ class Airplane:
     #
     #  CREATED: 06/07/2020
     # ================================================================================================
-	def __init__(self, airplane_type):
-		type_data = global_data.airplane_types_data[airplane_type]
-		
-		self.running_cost = type_data[global_data.running_cost]
-		self.max_range = type_data[global_data.max_range]
-		self.max_capasity = type_data[global_data.max_capasity]
-		self.min_first_class = type_data[global_data.min_first_class]
+    def __init__(self, airplane_type):
+        type_data = global_data.airplane_types_data[airplane_type]
+
+        self.running_cost = type_data[global_data.running_cost]
+        self.max_range = type_data[global_data.max_range]
+        self.max_capacity = type_data[global_data.max_capacity]
+        self.min_first_class = type_data[global_data.min_first_class]

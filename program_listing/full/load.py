@@ -1,9 +1,3 @@
-import program_listing.full.global_data as global_data
-import program_listing.full.renderer as renderer
-import program_listing.full.buttons as buttons
-import program_listing.full.typing as typing
-import program_listing.full.preset_controller as preset_controller
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -14,14 +8,25 @@ import program_listing.full.preset_controller as preset_controller
 #
 #                                       Created : September 28, 2020
 #
-#                                   Last Update : October 10, 2020
+#                                   Last Update : October 21, 2020
 #
 # ------------------------------------------------------------------------------------------------
 #
-#                                       What the file does.
+#                         Controls the option to load in presets from save.
 #
 # ------------------------------------------------------------------------------------------------
 #
+#   Imports:
+import program_listing.full.global_data as global_data
+import program_listing.full.renderer as renderer
+import program_listing.full.buttons as buttons
+import program_listing.full.typing as typing
+import program_listing.full.preset_controller as preset_controller
+#
+# ------------------------------------------------------------------------------------------------
+#
+#   refresh_buttons
+#   run
 #
 # ================================================================================================
 play_buttons = {}
@@ -32,6 +37,15 @@ back_button = buttons.StandardButton(110, 30,
 no_preset_message = 'no preset'
 
 
+# ================================================================================================
+#  refresh_buttons -- runs and controls the menu option
+#
+#  INPUT:  none
+#
+#  RETURNS:  none
+#
+#  CREATED: 28/07/2020
+# ================================================================================================
 def refresh_buttons():
     global play_buttons
     global delete_buttons
