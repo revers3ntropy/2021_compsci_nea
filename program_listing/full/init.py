@@ -1,31 +1,16 @@
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : init.py
-#
-#                                       Created : July 25, 2020
-#
-#                                   Last Update : October 21, 2020
-#
-# ------------------------------------------------------------------------------------------------
-#
-#                  Contains the function init, which is called to initialise the program.
-#
-# ------------------------------------------------------------------------------------------------
-#
-#   Imports:
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Contains the function init, which is called to initialise the program.
+
+Global Functions:
+    init_airports
+    init
+
+Imports:                                                                                         """
 import program_listing.full.airport as airport
 import program_listing.full.global_data as g
-#
-# ------------------------------------------------------------------------------------------------
-#
-#	init_airports
-#	init
-#
-# ================================================================================================
 
 
 # ================================================================================================

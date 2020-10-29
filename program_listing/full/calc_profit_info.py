@@ -32,6 +32,15 @@ import program_listing.full.renderer as renderer
 #	run - runs this menu option
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 main_menu_button = buttons.StandardButton(
     renderer.mid_x, renderer.mid_y + 200, typing.retro_8x10, 'main menu'

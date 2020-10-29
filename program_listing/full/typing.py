@@ -26,6 +26,15 @@ import program_listing.full.renderer as renderer
 #   write_from_left
 #
 # ==================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 
 # which characters are capable of being typed by this system

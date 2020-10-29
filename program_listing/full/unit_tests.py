@@ -25,10 +25,15 @@ from program_listing.full.clear_data import clear
 # -------------------------------------------------------------------------------------------------
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
 
+Description of file
 
-def run_tests():
-    unittest.main()
+Global Functions:
+
+Imports:                                                                                         """
 
 
 class ClearData(unittest.TestCase):
@@ -43,7 +48,7 @@ class ClearData(unittest.TestCase):
         clear()
 
         self.assertEqual([
-            global_data.airplane_type,
+            global_data.uk_airport,
             global_data.overseas_airport,
             global_data.airplane_type,
             global_data.first_seats,
@@ -58,3 +63,6 @@ class ClearData(unittest.TestCase):
             0
         ])
 
+
+if __name__ == '__main__':
+    unittest.main()

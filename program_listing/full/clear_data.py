@@ -26,6 +26,15 @@ import program_listing.full.global_data as global_data
 #	clear - clears all inputted data
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 
 # ================================================================================================

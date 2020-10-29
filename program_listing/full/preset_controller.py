@@ -1,25 +1,16 @@
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Controls presets, and the file management.
+
+Global Functions:
+    save_current_as_preset
+    load_in_preset
+
+Imports:                                                                                         """
 import program_listing.full.global_data as global_data
 import pickle
-
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : preset_controller.py
-#
-#                                       Created : September 28, 2020
-#
-#                                   Last Update : October 10, 2020
-#
-# ------------------------------------------------------------------------------------------------
-#
-#                             Controls presets, and the file management.
-#
-# ------------------------------------------------------------------------------------------------
-#
-# ================================================================================================
 
 
 class Preset:
@@ -39,6 +30,11 @@ for i in range(global_data.max_presets):
 
 with open('presets_data.txt', 'rb') as pickle_file:
     presets = pickle.load(pickle_file)
+
+
+def save_data():
+    with open('presets_data.txt', 'wb') as pickle_file:
+        pickle.dump(presets, pickle_file)
 
 
 # ================================================================================================
@@ -73,10 +69,7 @@ def save_current_as_preset(name: str):
         print('no more preset slots')
     else:
         print('saving')
-        with open('presets_data.txt', 'wb') as pickle_file:
-            print('opened')
-            pickle.dump(presets, pickle_file)
-            print('dumped')
+        save_data()
 
 
 # ================================================================================================

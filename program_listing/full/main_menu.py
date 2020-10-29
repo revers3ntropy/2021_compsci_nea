@@ -1,34 +1,21 @@
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : main_menu.py
-#
-#                                       Created : July 28, 2020
-#
-#                                   Last Update : October 21, 2020
-#
-# ------------------------------------------------------------------------------------------------
-#
-#                                    Controls the main menu.
-#
-# ------------------------------------------------------------------------------------------------
-#
-#   Imports:
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Controls the main menu: buttons, rendering, and the info that is displayed in the main menu
+
+Global Functions:
+    run
+    tick_stats
+
+Imports:                                                                                         """
 import program_listing.full.buttons as buttons
 import program_listing.full.global_data as global_data
 import program_listing.full.typing as typing
 import program_listing.full.clear_data as clear_data
 import program_listing.full.renderer as renderer
-#
-# ------------------------------------------------------------------------------------------------
-#
-#	run
-#	tick_stats
-#
-# ================================================================================================
+
+
 center_x = renderer.mid_x
 center_y = renderer.mid_y
 

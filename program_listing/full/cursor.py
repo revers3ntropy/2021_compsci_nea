@@ -27,6 +27,15 @@ import program_listing.full.global_data as global_data
 #	check_new_click
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 
 # ================================================================================================

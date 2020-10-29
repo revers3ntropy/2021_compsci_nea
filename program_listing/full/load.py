@@ -1,34 +1,21 @@
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : file_name.py
-#
-#                                       Created : September 28, 2020
-#
-#                                   Last Update : October 21, 2020
-#
-# ------------------------------------------------------------------------------------------------
-#
-#                         Controls the option to load in presets from save.
-#
-# ------------------------------------------------------------------------------------------------
-#
-#   Imports:
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Controls the menu option to load a preset
+
+Global Functions:
+    refresh_buttons
+    run
+
+Imports:                                                                                         """
 import program_listing.full.global_data as global_data
 import program_listing.full.renderer as renderer
 import program_listing.full.buttons as buttons
 import program_listing.full.typing as typing
 import program_listing.full.preset_controller as preset_controller
-#
-# ------------------------------------------------------------------------------------------------
-#
-#   refresh_buttons
-#   run
-#
-# ================================================================================================
+
+
 play_buttons = {}
 delete_buttons = {}
 back_button = buttons.StandardButton(110, 30,
@@ -96,5 +83,6 @@ def run():
         if delete_buttons[i] != 0:
             if delete_buttons[i].run() is not None:
                 preset_controller.presets[i] = 0
+                preset_controller.save_data()
 
     return global_data.load

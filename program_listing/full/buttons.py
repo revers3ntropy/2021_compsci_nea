@@ -1,11 +1,3 @@
-import pygame as py
-
-import program_listing.full.typing as typing
-import program_listing.full.cursor as cursor
-import program_listing.full.renderer as renderer
-import program_listing.full.global_data as global_data
-
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -25,11 +17,12 @@ import program_listing.full.global_data as global_data
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-# 	typing
-#	cursor
-#	renderer
-#	pygame
-#	global_data
+import pygame as py
+
+import program_listing.full.typing as typing
+import program_listing.full.cursor as cursor
+import program_listing.full.renderer as renderer
+import program_listing.full.global_data as global_data
 #
 # ------------------------------------------------------------------------------------------------
 #
@@ -65,8 +58,10 @@ import program_listing.full.global_data as global_data
 #	run			    - controls the object
 #
 # ================================================================================================
+
+
 class Buttons:
-    # ================================================================================================
+    # ============================================================================================
     #  __init__
     #
     #  INPUT:  x, y - int - the coordinates of the button, from the center

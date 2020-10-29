@@ -22,6 +22,15 @@
 # ------------------------------------------------------------------------------------------------
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 go = True  # should the program run or not?
 

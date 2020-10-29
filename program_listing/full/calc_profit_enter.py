@@ -24,6 +24,15 @@ import program_listing.full.renderer as renderer
 #	run - runs the main menu
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 center_x = renderer.mid_x
 center_y = renderer.mid_y
 

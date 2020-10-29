@@ -21,6 +21,15 @@ import pygame as py
 import program_listing.full.typing as typing
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 screen_x = 1000
 screen_y = 600

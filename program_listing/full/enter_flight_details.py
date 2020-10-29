@@ -27,6 +27,15 @@ import program_listing.full.typing as typing
 #	run
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 
 # ================================================================================================

@@ -1,35 +1,27 @@
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : main.py
-#
-#                                       Created : July 02, 2020
-#
-#                                   Last Update : October 21, 2020
-#
-# ------------------------------------------------------------------------------------------------
-#
-#	This file gets run to run the program. it first checks if you want to run the program normally
-#	or text-based, and hen runs it dependant on the answer.
-#	This file gets run to run the program. I have decided that I will try to separate any
-#	functions larger than 15 lines or 5 if statements as a general rule, and that this file will 
-#	contain as little as possible as it cannot be moved into the program listing.
-#
-#	I have decided that I will try to separately any functions larger than 15 lines or 5 if
-#	statements as a general rule, and that this file will contain as little as possible as it 
-#	cannot be moved into the program listing.
-#
-#   I will be using a file to store global data in each program. I found that it is the best way to
-#   give access to the current entered details to all menu options, and also allow data such as
-#   airplane information to be stored easily. I will be referring to the global data file as 'g'
-#   in most files.
-#
-# ------------------------------------------------------------------------------------------------
-#
-#   Imports:
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+This file gets run to run the program. it first checks if you want to run the program normally
+or text-based, and hen runs it dependant on the answer.
+This file gets run to run the program. I have decided that I will try to separate any
+functions larger than 15 lines or 5 if statements as a general rule, and that this file will
+contain as little as possible as it cannot be moved into the program listing.
+
+I have decided that I will try to separately any functions larger than 15 lines or 5 if
+statements as a general rule, and that this file will contain as little as possible as it
+cannot be moved into the program listing.
+
+I will be using a file to store global data in each program. I found that it is the best way to
+give access to the current entered details to all menu options, and also allow data such as
+airplane information to be stored easily. I will be referring to the global data file as 'g'
+in most files.
+
+Global Functions:
+    main
+    get_program_type
+
+Imports:                                                                                         """
 import pygame as py
 
 import program_listing.text.global_data as text_g
@@ -39,29 +31,15 @@ import program_listing.text.tick as text_tick
 import program_listing.full.global_data as full_g
 import program_listing.full.init as full_init
 import program_listing.full.tick as full_tick
-from program_listing.full.unit_tests import run_tests
-#
-# -------------------------------------------------------------------------------------------------
-#
-#	main
-#	get_program_type
-#
-# ================================================================================================
-
-# Whether or not the program should run the unit tests. If True, then the program itself wont run,
-# just the unit tests. This isn't stored in a global file because it is not part of either full or
-# text programs, as it is just needed for this file which controls them.
-run_unit_tests = False
 
 
-# ================================================================================================
-#  main -- initialises and then runs the main loop for the selected program
-#
-#  INPUT:  program_type: str - which program is to be run
-#
-#  RETURNS:  none
-# ================================================================================================
 def main(program_type: str):
+    """
+    initialises and then runs the main loop for the selected program
+
+    args:
+        program_type - which program is to be run, text-based or the full
+    """
     py.display.set_caption("Joseph Coppin's NEA")
 
     if program_type == 'text':
@@ -79,7 +57,7 @@ def main(program_type: str):
             full_tick.tick()
 
     else:
-        raise Exception(f'Error: program type is {program_type}, which is not valid')
+        raise Exception(f"Program type is {program_type}, which is not valid")
 
     py.quit()
 
@@ -112,7 +90,4 @@ def get_program_type():
 
 
 if __name__ == '__main__':
-    if run_unit_tests:
-        run_tests()
-
     main(get_program_type())

@@ -1,28 +1,20 @@
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Controls the save page for saving the current as a preset
+
+Global Functions:
+    preset_name_check
+    run
+
+Imports:                                                                                         """
 import program_listing.full.global_data as global_data
 import program_listing.full.renderer as renderer
 import program_listing.full.buttons as buttons
 import program_listing.full.typing as typing
 import program_listing.full.preset_controller as preset_controller
 
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : file_name.py
-#
-#                                       Created : September 28, 2020
-#
-#                                   Last Update : September 30, 2020
-#
-# ------------------------------------------------------------------------------------------------
-#
-#                                       What the file does.
-#
-# ------------------------------------------------------------------------------------------------
-#
-# ================================================================================================
 
 back_button = buttons.StandardButton(renderer.mid_x, renderer.mid_y - 100,
                                      typing.retro_8x10, 'back')

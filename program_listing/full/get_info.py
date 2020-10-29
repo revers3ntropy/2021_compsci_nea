@@ -1,8 +1,3 @@
-import program_listing.full.global_data as global_data
-import program_listing.full.renderer as renderer
-import program_listing.full.buttons as buttons
-import program_listing.full.typing as typing
-
 # ================================================================================================
 # |                                       Joseph Coppin                                         |
 # ================================================================================================
@@ -22,16 +17,25 @@ import program_listing.full.typing as typing
 # ------------------------------------------------------------------------------------------------
 #
 # Imports:
-# 	global_data
-#	renderer
-#	buttons
-#	typing
+import program_listing.full.global_data as global_data
+import program_listing.full.renderer as renderer
+import program_listing.full.buttons as buttons
+import program_listing.full.typing as typing
 #
 # ------------------------------------------------------------------------------------------------
 #
 #	run - runs this menu option
 #
 # ================================================================================================
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+Description of file
+
+Global Functions:
+
+Imports:                                                                                         """
 
 back_button = buttons.StandardButton(renderer.mid_x, renderer.mid_y + 250, typing.retro_8x10,
                                      'back')

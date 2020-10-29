@@ -1,22 +1,13 @@
-# ================================================================================================
-# |                                       Joseph Coppin                                         |
-# ================================================================================================
-#
-#                                  Project Name : Computer Science GSCE Coursework
-#
-#                                     File Name : tick.py
-#
-#                                       Created : July 25, 2020
-#
-#                                   Last Update : October 21, 2020
-#
-# ------------------------------------------------------------------------------------------------
-#
-#             This file contains the function tick, which is run every tick of the program.
-#
-# ------------------------------------------------------------------------------------------------
-#
-#   Imports:
+"""
+                                         Joseph Coppin
+                                  Computer Science GSCE Coursework
+
+This file contains the function tick, which is run every tick of the program.
+
+Global Functions:
+    tick
+
+Imports:                                                                                         """
 import program_listing.full.renderer as renderer
 import program_listing.full.global_data as g
 import program_listing.full.cursor as cursor
@@ -30,12 +21,7 @@ import program_listing.full.main_menu as main_menu
 import program_listing.full.save as save
 import program_listing.full.load as load
 import pygame as py
-#
-# ------------------------------------------------------------------------------------------------
-#
-#	tick
-#
-# ================================================================================================
+
 
 # The state machine holds two things: the ID for that state, and the file which contains the run
 # function for the state.
