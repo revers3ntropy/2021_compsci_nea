@@ -72,19 +72,23 @@ def run():
     else:
         airport_dist = find_overseas_airport(global_data.overseas_airport).dist_BI
 
-    standard_seats = int(
-        global_data.airplane_types_data[global_data.airplane_type][global_data.max_capacity]) - int(
-        global_data.first_seats) * 2
-    cost_per_seat = global_data.airplane_types_data[global_data.airplane_type][
-                        global_data.running_cost] * airport_dist / 100
-    cost = float(cost_per_seat) * (float(global_data.first_seats) + float(standard_seats))
-    income = float(global_data.first_seats) * float(
-        global_data.first_price) + standard_seats * float(global_data.standard_price)
-    profit = income - cost
+    try:
+        standard_seats = int(
+            global_data.airplane_types_data[global_data.airplane_type][global_data.max_capacity]) - int(
+            global_data.first_seats) * 2
+        cost_per_seat = global_data.airplane_types_data[global_data.airplane_type][
+                            global_data.running_cost] * airport_dist / 100
+        cost = float(cost_per_seat) * (float(global_data.first_seats) + float(standard_seats))
+        income = float(global_data.first_seats) * float(
+            global_data.first_price) + standard_seats * float(global_data.standard_price)
+        profit = income - cost
 
-    typing.write(typing.retro_8x10, f'The flight costs {cost_per_seat} per seat', (renderer.mid_x, renderer.mid_y - 100))
-    typing.write(typing.retro_8x10, f'The flight costs {cost} in total', (renderer.mid_x, renderer.mid_y - 50))
-    typing.write(typing.retro_8x10, f'The total income of {income}', (renderer.mid_x, renderer.mid_y))
-    typing.write(typing.retro_8x10, f'The profit is {profit}', (renderer.mid_x, renderer.mid_y + 50))
+        typing.write(typing.retro_8x10, f'The flight costs {cost_per_seat} per seat', (renderer.mid_x, renderer.mid_y - 100))
+        typing.write(typing.retro_8x10, f'The flight costs {cost} in total', (renderer.mid_x, renderer.mid_y - 50))
+        typing.write(typing.retro_8x10, f'The total income of {income}', (renderer.mid_x, renderer.mid_y))
+        typing.write(typing.retro_8x10, f'The profit is {profit}', (renderer.mid_x, renderer.mid_y + 50))
+    except ValueError:
+        print(f"Bug found: calc_profit_info.run() found a value error. Probably because it is "
+              f"trying to float or int a string or something.")
 
     return global_data.calc_profit_info

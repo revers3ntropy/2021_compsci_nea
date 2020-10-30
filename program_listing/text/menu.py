@@ -114,24 +114,24 @@ def enter_flight_details():
         print()
         print('Type of aircraft to be used:')
         print()
-        repsonse = input()
-        if repsonse in ('medium narrow', 'large narrow', 'medium wide'):
+        response = input()
+        if response in ('medium narrow', 'large narrow', 'medium wide'):
             valid_response = True
             print()
             print('    -	Aircraft details:	-	')
 
-            if repsonse == 'medium narrow':
+            if response == 'medium narrow':
                 global_data.airplane_type = global_data.medium_narrow
-            elif repsonse == 'large narrow':
+            elif response == 'large narrow':
                 global_data.airplane_type = global_data.large_narrow
-            elif repsonse == 'medium_wide':
+            elif response == 'medium_wide':
                 global_data.airplane_type = global_data.medium_wide
 
             aircraft_data = global_data.airplane_types_data[global_data.airplane_type]
 
             print('The running cost per km is ' + str(aircraft_data[global_data.running_cost]))
             print('The maximum range in km is ' + str(aircraft_data[global_data.max_range]))
-            print('The maximum capasity is ' + str(aircraft_data[global_data.max_capasity]))
+            print('The maximum capacity is ' + str(aircraft_data[global_data.max_capacity]))
             print('The minimum first class seats is ' + str(
                 aircraft_data[global_data.min_first_class]))
 
@@ -145,13 +145,13 @@ def enter_flight_details():
                     if first_class_seats < aircraft_data[global_data.min_first_class]:
                         print(
                             'That is smaller than the minumum number of first class seats for that aircraft.')
-                    elif first_class_seats > aircraft_data[global_data.max_capasity] / 2:
+                    elif first_class_seats > aircraft_data[global_data.max_capacity] / 2:
                         print(
                             'That is larger than the maximum number of first class seats for that aircraft.')
                     else:
                         global_data.first_seats = first_class_seats
                         valid_response = True
-                        max_standard_seats = aircraft_data[global_data.max_capasity]
+                        max_standard_seats = aircraft_data[global_data.max_capacity]
                         number_of_standard_seats = max_standard_seats - first_class_seats / 2
                         print('the number of standard class seats is ' + str(
                             int(number_of_standard_seats)))
@@ -171,7 +171,7 @@ def enter_flight_details():
 #  CREATED: 09/07/2020
 # ================================================================================================
 def calculate_cost():
-    if global_data.uk_airport == '' or global_data.overseas_airport == None:
+    if global_data.uk_airport == '' or global_data.overseas_airport is None:
         print('Sorry, please enter flight details first')
     elif global_data.airplane_type == -1:
         print('Sorry, please enter airplane type first')
@@ -217,7 +217,7 @@ def calculate_cost():
                     found = True
 
             standard_seats = global_data.airplane_types_data[global_data.airplane_type][
-                                 global_data.max_capasity] - global_data.first_seats * 2
+                                 global_data.max_capacity] - global_data.first_seats * 2
             cost_per_seat = float(global_data.airplane_types_data[global_data.airplane_type][
                                       global_data.running_cost]) * float(airport_dist) / 100
             cost = cost_per_seat * (global_data.first_seats + standard_seats)
